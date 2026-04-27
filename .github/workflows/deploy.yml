@@ -1,0 +1,36 @@
+name: Deploy to Digital Ocean
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Github Container Registry
+        run: |
+          echo "${{ secrets.MY_CV_APP }}" | docker login ghcr.io -u juanmiguel431 --password-stdin
+
+      - name: Build and Push Docker images
+        run: |
+          docker build --build-arg GITHUB_SHA=${{ github.sha }} -t ghcr.io/juanmiguel431/my-cv-app -f ./Dockerfile .
+
+          docker push ghcr.io/juanmiguel431/my-cv-app
+
+      - name: Deploy on Droplet via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DROPLET_HOST }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.DROPLET_SSH_PRIVATE_KEY }}
+          script: |
+            echo "${{ secrets.MY_CV_APP }}" | docker login ghcr.io -u juanmiguel431 --password-stdin
+            docker pull ghcr.io/juanmiguel431/my-cv-app:latest
+            
+            cd /home/juanmiguel431/my-cv-app
+            docker compose up -d --remove-orphans
+            docker system prune -af
