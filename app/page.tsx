@@ -1,6 +1,21 @@
 import Image from "next/image";
-import { BookIcon, CalendarIcon, ChipIcon, ExperienceIcon, GithubIcon, GraduationIcon, MailIcon, PhoneIcon, SummaryIcon } from "./components/icons";
-import { continuingEducation, education, experiences, techGroups } from "./constants/cv-data";
+import {
+  BookIcon,
+  CalendarIcon,
+  ChipIcon,
+  ExperienceIcon,
+  GithubIcon,
+  GraduationIcon,
+  MailIcon,
+  PhoneIcon,
+  SummaryIcon,
+} from "@/components/icons";
+import {
+  continuingEducation,
+  education,
+  experiences,
+  techGroups,
+} from "@/constants/cv-data";
 
 export default function Home() {
   return (
