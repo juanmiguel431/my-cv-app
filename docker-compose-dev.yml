@@ -5,10 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "3000:3000"
+      - '3000:80'
     environment:
       NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
-      HOSTNAME: "0.0.0.0"
-      PORT: "3000"
+      HOSTNAME: '0.0.0.0'
+      PORT: '80'
     restart: unless-stopped
