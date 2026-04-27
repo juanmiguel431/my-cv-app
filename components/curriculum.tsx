@@ -11,8 +11,10 @@ import {
   GithubIcon,
   GraduationIcon,
   MailIcon,
+  MoonIcon,
   PhoneIcon,
   SummaryIcon,
+  SunIcon,
 } from "@/components/icons";
 import {
   continuingEducation,
@@ -121,7 +123,9 @@ export default function Curriculum() {
                 : "border border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
             }`}
           >
-            <span aria-hidden>{isDark ? "sun" : "moon"}</span>
+            <span aria-hidden="true">
+              {isDark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
+            </span>
             <span>{isDark ? "Light mode" : "Dark mode"}</span>
           </button>
         </header>
