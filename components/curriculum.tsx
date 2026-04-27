@@ -88,6 +88,10 @@ export default function Curriculum() {
   const accentChip = isDark
     ? "border border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
     : "border border-cyan-200 bg-cyan-100 text-cyan-800";
+  const heroBadge = isDark
+    ? accentChip
+    : "border border-sky-300 bg-sky-200/90 text-sky-950 shadow-sm shadow-sky-100/70";
+  const heroRoleText = isDark ? "text-cyan-300" : "text-sky-950";
   const subtleCard = isDark
     ? "rounded-2xl border border-slate-700/70 bg-slate-800/60"
     : "rounded-2xl border border-slate-200 bg-slate-50/90";
@@ -100,16 +104,14 @@ export default function Curriculum() {
         <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
             <p
-              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] ${accentChip}`}
+              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] ${heroBadge}`}
             >
               Curriculum Vitae
             </p>
             <h1 className={`mt-3 text-2xl font-black tracking-tight sm:text-3xl ${sectionTitle}`}>
               Juan Miguel Paulino Carpio
             </h1>
-            <p
-              className={`mt-1 text-sm font-medium sm:text-base ${isDark ? "text-cyan-300" : "text-cyan-700"}`}
-            >
+            <p className={`mt-1 text-sm font-semibold sm:text-base ${heroRoleText}`}>
               Senior Software Engineer
             </p>
           </div>
