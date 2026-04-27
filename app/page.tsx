@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { JSX } from 'react';
 
 type IconProps = {
@@ -267,11 +268,15 @@ export default function Home(): JSX.Element {
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="relative flex h-48 w-48 items-center justify-center rounded-full border-4 border-dashed border-blue-300 bg-gradient-to-br from-blue-100 to-cyan-50 shadow-inner">
-              <div className="text-center">
-                <p className="text-4xl font-black tracking-wider text-blue-700">JM</p>
-                <p className="mt-2 text-xs font-medium text-slate-600">Profile Photo Placeholder</p>
-              </div>
+            <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-blue-200 bg-slate-100 shadow-xl shadow-blue-200/60">
+              <Image
+                src="/profile.jpg"
+                alt="Juan Miguel Paulino Carpio profile picture"
+                fill
+                priority
+                sizes="(min-width: 1024px) 12rem, 12rem"
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </section>
