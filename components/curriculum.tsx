@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useSyncExternalStore } from "react";
 
 import {
@@ -16,12 +17,12 @@ import {
   SummaryIcon,
   SunIcon,
 } from "@/components/icons";
-import {
-  continuingEducation,
-  education,
-  experiences,
-  techGroups,
-} from "@/constants/cv-data";
+import type { CvDictionary, Locale } from "@/models/cv";
+
+type CurriculumProps = {
+  dictionary: CvDictionary;
+  currentLocale: Locale;
+};
 
 type ThemeMode = "light" | "dark";
 const THEME_EVENT = "theme-preference-change";
@@ -60,7 +61,7 @@ function subscribeTheme(onStoreChange: () => void): () => void {
   };
 }
 
-export default function Curriculum() {
+export default function Curriculum({ dictionary, currentLocale }: CurriculumProps) {
   const theme = useSyncExternalStore(
     subscribeTheme,
     getPreferredTheme,
@@ -68,13 +69,19 @@ export default function Curriculum() {
   );
 
   useEffect(() => {
+    document.documentElement.lang = currentLocale;
     document.documentElement.style.colorScheme = theme;
-  }, [theme]);
+  }, [currentLocale, theme]);
 
   const setTheme = (nextTheme: ThemeMode) => {
     window.localStorage.setItem("theme", nextTheme);
     window.dispatchEvent(new Event(THEME_EVENT));
   };
+
+  const { labels, profile, experiences, techGroups, education, continuingEducation } = dictionary;
+  const phoneHref = `tel:${profile.phone.replace(/[^\d+]/g, "")}`;
+  const githubUrl = `https://${profile.github}`;
+  const availableLocales: Locale[] = ["en", "es"];
 
   const isDark = theme === "dark";
   const pageBg = isDark
@@ -106,30 +113,67 @@ export default function Curriculum() {
             <p
               className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] ${heroBadge}`}
             >
-              Curriculum Vitae
+              {labels.curriculumVitae}
             </p>
             <h1 className={`mt-3 text-2xl font-black tracking-tight sm:text-3xl ${sectionTitle}`}>
-              Juan Miguel Paulino Carpio
+              {profile.name}
             </h1>
             <p className={`mt-1 text-sm font-semibold sm:text-base ${heroRoleText}`}>
-              Senior Software Engineer
+              {profile.role}
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setTheme(isDark ? "light" : "dark")}
-            className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
-              isDark
-                ? "border border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
-                : "border border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
-            }`}
-          >
-            <span aria-hidden="true">
-              {isDark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
-            </span>
-            <span>{isDark ? "Light mode" : "Dark mode"}</span>
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2">
+              <span className={`text-xs font-semibold uppercase tracking-wide ${mutedText}`}>
+                {labels.language}
+              </span>
+              <div
+                className={`inline-flex rounded-full border p-1 ${
+                  isDark ? "border-slate-600 bg-slate-800" : "border-slate-300 bg-white"
+                }`}
+              >
+                {availableLocales.map((locale) => {
+                  const isActiveLocale = locale === currentLocale;
+                  const localeLabel = locale.toUpperCase();
+
+                  return (
+                    <Link
+                      key={locale}
+                      href={`/${locale}`}
+                      aria-current={isActiveLocale ? "page" : undefined}
+                      className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                        isActiveLocale
+                          ? isDark
+                            ? "bg-cyan-400/20 text-cyan-200"
+                            : "bg-cyan-100 text-cyan-900"
+                          : isDark
+                            ? "text-slate-300 hover:bg-slate-700"
+                            : "text-slate-600 hover:bg-slate-100"
+                      }`}
+                    >
+                      {localeLabel}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+                isDark
+                  ? "border border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
+                  : "border border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
+              }`}
+            >
+              <span aria-hidden="true">
+                {isDark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
+              </span>
+              <span>{isDark ? labels.themeLight : labels.themeDark}</span>
+            </button>
+          </div>
         </header>
 
         <section className="grid gap-6 lg:grid-cols-[320px_1fr]">
@@ -142,7 +186,7 @@ export default function Curriculum() {
               >
                 <Image
                   src="/profile.jpg"
-                  alt="Juan Miguel Paulino Carpio profile picture"
+                  alt={profile.profileImageAlt}
                   fill
                   priority
                   sizes="11rem"
@@ -153,25 +197,25 @@ export default function Curriculum() {
 
             <div className="space-y-3 text-sm">
               <a
-                href="mailto:juanmiguel431@gmail.com"
+                href={`mailto:${profile.email}`}
                 className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <MailIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                <span className={mutedText}>juanmiguel431@gmail.com</span>
+                <span className={mutedText}>{profile.email}</span>
               </a>
               <a
-                href="tel:+18298205436"
+                href={phoneHref}
                 className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <PhoneIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                <span className={mutedText}>+1 (829) 820-5436</span>
+                <span className={mutedText}>{profile.phone}</span>
               </a>
               <a
-                href="https://github.com/juanmiguel431"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
@@ -179,7 +223,7 @@ export default function Curriculum() {
                 }`}
               >
                 <GithubIcon className="h-4 w-4" />
-                <span className={mutedText}>github.com/juanmiguel431</span>
+                <span className={mutedText}>{profile.github}</span>
               </a>
             </div>
 
@@ -188,10 +232,10 @@ export default function Curriculum() {
                 className={`mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide ${sectionTitle}`}
               >
                 <ChipIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                Core Stack
+                {labels.coreStack}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {[".NET", "Java", "Python", "Next.js", "AWS", "Azure"].map((item) => (
+                {profile.coreStack.map((item) => (
                   <span key={item} className={`rounded-full px-3 py-1 text-xs font-semibold ${accentChip}`}>
                     {item}
                   </span>
@@ -204,26 +248,20 @@ export default function Curriculum() {
             <article className={`rounded-3xl p-6 ${card}`}>
               <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                 <SummaryIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                Professional Summary
+                {labels.professionalSummary}
               </h2>
-              <p className={`text-sm leading-7 ${mutedText}`}>
-                I am a Software Engineer with over 15 years of experience developing solutions in the financial,
-                insurance, and healthcare sectors. I specialize in .NET (C#), Java, Python, TypeScript, and React,
-                with experience deploying applications on AWS and Azure. I focus on building reliable, scalable,
-                user-centered platforms and continuously improving the user experience. I am interested in roles where
-                I can contribute both as a developer and to architectural decisions.
-              </p>
+              <p className={`text-sm leading-7 ${mutedText}`}>{profile.summary}</p>
             </article>
 
             <article className={`rounded-3xl p-6 ${card}`}>
               <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                 <ExperienceIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                Experience
+                {labels.experience}
               </h2>
               <div className="space-y-4">
                 {experiences.map((experience) => (
                   <section
-                    key={`${experience.role}-${experience.company}`}
+                    key={`${experience.role}-${experience.company}-${experience.period}`}
                     className={`rounded-2xl p-4 ${subtleCard}`}
                   >
                     <div className="flex flex-wrap items-start justify-between gap-2">
@@ -270,7 +308,7 @@ export default function Curriculum() {
               <article className={`rounded-3xl p-6 ${card}`}>
                 <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                   <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                  Technologies
+                  {labels.technologies}
                 </h2>
                 <div className="space-y-3">
                   {techGroups.map((group) => (
@@ -286,7 +324,7 @@ export default function Curriculum() {
                 <article className={`rounded-3xl p-6 ${card}`}>
                   <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                     <GraduationIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                    Education
+                    {labels.education}
                   </h2>
                   <div className="space-y-3">
                     {education.map((item) => (
@@ -304,7 +342,7 @@ export default function Curriculum() {
                 <article className={`rounded-3xl p-6 ${card}`}>
                   <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                     <BookIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                    Continuing Education
+                    {labels.continuingEducation}
                   </h2>
                   <ul className="space-y-2 text-sm">
                     {continuingEducation.map((course) => (
