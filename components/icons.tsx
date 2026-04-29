@@ -27,6 +27,14 @@ export function GithubIcon({ className = "h-4 w-4" }: IconProps): JSX.Element {
   );
 }
 
+export function LinkedinIcon({ className = "h-4 w-4" }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5 2.5 2.5 0 0 0 4.98 3.5ZM3 9.5h4v11H3v-11Zm7 0h3.8v1.5h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.7 2.5 4.7 5.9v5.5h-4v-4.9c0-1.2 0-2.7-1.8-2.7s-2 1.4-2 2.6v5h-4v-11Z" />
+    </svg>
+  );
+}
+
 export function SummaryIcon({ className = "h-4 w-4" }: IconProps): JSX.Element {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>

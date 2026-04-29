@@ -11,6 +11,7 @@ import {
   ExperienceIcon,
   GithubIcon,
   GraduationIcon,
+  LinkedinIcon,
   MailIcon,
   MoonIcon,
   PhoneIcon,
@@ -81,6 +82,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
   const { labels, profile, experiences, techGroups, education, continuingEducation } = dictionary;
   const phoneHref = `tel:${profile.phone.replace(/[^\d+]/g, "")}`;
   const githubUrl = `https://${profile.github}`;
+  const linkedinUrl = `https://${profile.linkedin}`;
   const availableLocales: Locale[] = ["en", "es"];
 
   const isDark = theme === "dark";
@@ -224,6 +226,17 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               >
                 <GithubIcon className="h-4 w-4" />
                 <span className={mutedText}>{profile.github}</span>
+              </a>
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
+                  isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
+                }`}
+              >
+                <LinkedinIcon className="h-4 w-4" />
+                <span className={mutedText}>{profile.linkedin}</span>
               </a>
             </div>
 

@@ -32,10 +32,11 @@ export const cvEs: CvDictionary = {
     email: "juanmiguel431@gmail.com",
     phone: "+1 (829) 820-5436",
     github: "github.com/juanmiguel431",
+    linkedin: "linkedin.com/in/juanmiguel431",
     profileImageAlt: "Foto de perfil de Juan Miguel Paulino Carpio",
     summary:
       "Soy Ingeniero de Software con más de 15 años de experiencia desarrollando soluciones en los sectores financiero, seguros y salud. Me especializo en .NET (C#), Java, Python, TypeScript y React, con experiencia desplegando aplicaciones en AWS y Azure. Me enfoco en construir plataformas confiables, escalables y centradas en el usuario, mejorando continuamente la experiencia de uso. Me interesan roles donde pueda aportar como desarrollador y también en decisiones de arquitectura.",
-    coreStack: [".NET", "Java", "Python", "Next.js", "AWS", "Azure"],
+    coreStack: [".NET", "Java", "Python", "React", "Next.js", "AWS", "Azure"],
   },
   experiences: [
     {

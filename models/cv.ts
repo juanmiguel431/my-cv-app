@@ -54,6 +54,7 @@ export type CvProfile = {
   email: string;
   phone: string;
   github: string;
+  linkedin: string;
   profileImageAlt: string;
   summary: string;
   coreStack: string[];
