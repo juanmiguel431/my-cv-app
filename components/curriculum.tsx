@@ -79,7 +79,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
     window.dispatchEvent(new Event(THEME_EVENT));
   };
 
-  const { labels, profile, experiences, techGroups, education, continuingEducation } = dictionary;
+  const { labels, profile, experiences, techGroups, education } = dictionary;
   const phoneHref = `tel:${profile.phone.replace(/[^\d+]/g, "")}`;
   const githubUrl = `https://${profile.github}`;
   const linkedinUrl = `https://${profile.linkedin}`;
@@ -239,22 +239,6 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                 <span className={mutedText}>{profile.linkedin}</span>
               </a>
             </div>
-
-            <div className="mt-6">
-              <h3
-                className={`mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-wide ${sectionTitle}`}
-              >
-                <ChipIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                {labels.coreStack}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {profile.coreStack.map((item) => (
-                  <span key={item} className={`rounded-full px-3 py-1 text-xs font-semibold ${accentChip}`}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
           </aside>
 
           <div className="space-y-6">
@@ -293,7 +277,6 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                       >
                         <CalendarIcon className="h-3.5 w-3.5" />
                         <span>{experience.period}</span>
-                        {experience.contract ? <span>({experience.contract})</span> : null}
                       </div>
                     </div>
                     <p className={`mt-3 text-sm leading-6 ${mutedText}`}>{experience.description}</p>
@@ -321,7 +304,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               <article className={`rounded-3xl p-6 ${card}`}>
                 <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
                   <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                  {labels.technologies}
+                  {labels.coreSkills}
                 </h2>
                 <div className="space-y-3">
                   {techGroups.map((group) => (
@@ -350,20 +333,6 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                       </div>
                     ))}
                   </div>
-                </article>
-
-                <article className={`rounded-3xl p-6 ${card}`}>
-                  <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
-                    <BookIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                    {labels.continuingEducation}
-                  </h2>
-                  <ul className="space-y-2 text-sm">
-                    {continuingEducation.map((course) => (
-                      <li key={course} className={`px-3 py-2 ${subtleCard} ${mutedText}`}>
-                        {course}
-                      </li>
-                    ))}
-                  </ul>
                 </article>
               </div>
             </div>

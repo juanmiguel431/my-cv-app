@@ -8,7 +8,7 @@ export type Experience = {
   role: string;
   company: string;
   period: string;
-  contract?: string;
+  contract?: boolean;
   description: string;
   contributions: string[];
   technologies: string[];
@@ -31,11 +31,10 @@ export type CvLabels = {
   themeDark: string;
   language: string;
   coreStack: string;
+  coreSkills: string;
   professionalSummary: string;
   experience: string;
-  technologies: string;
   education: string;
-  continuingEducation: string;
 };
 
 export type CvMetadata = {
@@ -57,7 +56,6 @@ export type CvProfile = {
   linkedin: string;
   profileImageAlt: string;
   summary: string;
-  coreStack: string[];
 };
 
 export type CvDictionary = {
@@ -68,5 +66,4 @@ export type CvDictionary = {
   experiences: Experience[];
   techGroups: TechGroup[];
   education: Education[];
-  continuingEducation: string[];
 };

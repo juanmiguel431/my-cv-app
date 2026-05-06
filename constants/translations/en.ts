@@ -21,10 +21,9 @@ export const cvEn: CvDictionary = {
     language: "Language",
     coreStack: "Core Stack",
     professionalSummary: "Professional Summary",
-    experience: "Experience",
-    technologies: "Technologies",
+    experience: "Work Experience",
+    coreSkills: "Core Skills",
     education: "Education",
-    continuingEducation: "Continuing Education",
   },
   profile: {
     name: "Juan Miguel Paulino Carpio",
@@ -35,15 +34,14 @@ export const cvEn: CvDictionary = {
     linkedin: "linkedin.com/in/juanmiguel431",
     profileImageAlt: "Juan Miguel Paulino Carpio profile picture",
     summary:
-      "I am a Software Engineer with over 15 years of experience developing solutions in the financial, insurance, and healthcare sectors. I specialize in .NET (C#), Java, Python, TypeScript, and React, with experience deploying applications on AWS and Azure. I focus on building reliable, scalable, user-centered platforms and continuously improving the user experience. I am interested in roles where I can contribute both as a developer and to architectural decisions.",
-    coreStack: [".NET", "Java", "Python", "React", "Next.js", "AWS", "Azure"],
+      "Senior Software Engineer with over 15 years of experience designing and developing scalable solutions for the financial, insurance, and healthcare industries. Expertise in .NET (C#), Java, Python, TypeScript, and React, combined with cloud experience across AWS and Azure. Strong background in building reliable, high-performance, user-centered platforms while contributing to software architecture and technical decision-making.",
   },
   experiences: [
     {
       role: "Senior Software Engineer",
-      company: "NAXMEK / BILLET",
+      company: "BILLET",
       period: "2024 - 2025",
-      contract: "Contract",
+      contract: true,
       description:
         "Fintech platform for digital payments and financial services, enabling real-time transactions, customer onboarding, and regulatory compliance through integrations with banking systems (e.g., Banco BHD).",
       contributions: [
@@ -84,18 +82,17 @@ export const cvEn: CvDictionary = {
       technologies: [".NET", "C#", "Azure", "React", "Next.js", "SQL Server", "Cosmos DB"],
     },
     {
-      role: "IT Solutions Architect / Project Lead",
+      role: "Project Lead",
       company: "GRUPO UNIVERSAL",
-      period: "2008 - 2020",
+      period: "2011 - 2020",
       description:
-        "Leading insurance group in the Dominican Republic specializing in General Insurance and Health services.",
+        "One of the leading financial and insurance groups in the Dominican Republic, offering services across insurance, health, investments, and retirement solutions.",
       contributions: [
         "Contributed to enterprise digital transformation by migrating core insurance services from legacy Oracle systems to Microsoft Azure.",
         "Designed integrations across General Insurance and Health/ARS platforms, enabling a unified 360-degree customer view for 500,000+ affiliates.",
         "Supported enterprise data integration and ETL pipelines using SAS.",
         "Produced UML models and technical documentation to align architecture across teams.",
         "Participated in technical evaluation and vendor selection for new business units.",
-        "Earlier role: Systems Analyst supporting core insurance platforms (2008 - 2012).",
       ],
       technologies: [
         "ASP.NET",
@@ -108,40 +105,65 @@ export const cvEn: CvDictionary = {
       ],
     },
     {
-      role: "IT Instructor",
-      company: "UNIBE / ITLA",
-      period: "2008 - 2019",
-      description: "Higher-education institutions focused on information technology disciplines.",
+      role: "Systems Analyst",
+      company: "SEGUROS UNIVERSAL",
+      period: "2008 - 2011",
+      description:
+        "Is the general insurance subsidiary of Grupo Universal, specializing in automobile, property, fire, marine, and other commercial risk insurance products.",
       contributions: [
-        "Taught programming courses (C#, Java) and database fundamentals.",
-        "Provided technical training to instructors and students.",
+        "Managed end-to-end resolution of production incidents and bug fixes for core insurance platforms.",
+        "Collaborated directly with business users to investigate reported issues, validate requirements, and ensure customer satisfaction.",
+        "Coordinated user acceptance testing (UAT) and production release activities for application fixes and enhancements.",
+        "Produced technical documentation and deployment deliverables to support controlled production releases.",
+        "Consistently met performance targets based on incident closure metrics and client satisfaction indicators."
       ],
-      technologies: ["C#", "Java", "Databases", "Technical Training"],
+      technologies: [
+        "Oracle Forms & Reports",
+        "Oracle Database",
+      ],
+    },
+    {
+      role: "IT Instructor",
+      company: "TECHNOLOGICAL INSTITUTE OF THE AMERICAS - ITLA",
+      period: "2019",
+      description: "A leading technical institute in the Dominican Republic specializing in information technology, software development, cybersecurity, and digital innovation programs.",
+      contributions: [
+        "Taught programming courses in C#, Java, and database fundamentals to students with varying technical backgrounds.",
+        "Developed practical and beginner-friendly learning materials to simplify complex programming concepts and improve student engagement.",
+      ],
+      technologies: ["C#", "Java", "MySQL", "Google Classroom"],
+    },
+    {
+      role: "Technical Instructor",
+      company: "IBERO-AMERICAN UNIVERSITY - UNIBE",
+      period: "2008",
+      description: "A private university in the Dominican Republic recognized for its programs in technology, engineering, business, and health sciences.",
+      contributions: [
+        "Delivered technical training sessions for instructors and students, translating technical concepts into accessible and easy-to-follow guidance.",
+        "Provided support and onboarding for Moodle-based educational tools and workflows.",
+      ],
+      technologies: ["Moddle"],
     },
   ],
   techGroups: [
-    { title: "Backend", items: ".NET / C# / REST APIs / Spring Boot / Java / Python" },
-    { title: "Frontend", items: "React / Next.js / TypeScript / React Native" },
-    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / CI/CD" },
-    { title: "Architecture", items: "Microservices / Event-Driven / Serverless" },
-    { title: "Databases", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle" },
+    { title: "Software Engineering", items: "Full-Stack Web Development / Backend API Design and Development" },
+    { title: "Architectures", items: "Microservices / Event-Driven / Serverless" },
+    { title: "Backend", items: ".NET / Spring Boot" },
+    { title: "Frontend", items: "React / Next.js / React Native" },
+    { title: "Programming Languages", items: "C# / Java / Python / TypeScript" },
+    { title: "Database Engineering", items: "SQL and NoSQL Data Modeling / SQL Server / PostgreSQL / Amazon DynamoDB / Azure Cosmos DB / Oracle" },
+    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / CI/CD Automation" },
   ],
   education: [
     {
       degree: "Bachelor's Degree in Information and Communication Technologies (ICT)",
       period: "2007 - 2011",
-      institution: "Iberoamerican University (UNIBE)",
+      institution: "Ibero-american University (UNIBE)",
     },
     {
       degree: "Industrial Electronics Technologist (Digital Systems)",
       period: "2003 - 2007",
       institution: "Loyola Polytechnical Institute (IPL)",
     },
-  ],
-  continuingEducation: [
-    "Docker & Kubernetes",
-    "Design Patterns in C#",
-    "Spring Boot & Hibernate",
-    "Advanced React & Next.js",
-  ],
+  ]
 };
