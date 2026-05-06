@@ -88,14 +88,11 @@ export const cvEn: CvDictionary = {
       description: "One of the leading financial groups in the Dominican Republic, offering services across insurance, health, investments, and retirement solutions.",
       roles: [
         {
-          name: "Project Lead",
-          period: "2011 - 2020",
+          name: "Solutions Architect",
+          period: "2018 - 2020",
           contributions: [
             "Contributed to enterprise digital transformation by migrating core insurance services from legacy Oracle systems to Microsoft Azure.",
-            "Designed integrations across General Insurance and Health/ARS platforms, enabling a unified 360-degree customer view for 500,000+ affiliates.",
-            "Supported enterprise data integration and ETL pipelines using SAS.",
             "Produced UML models and technical documentation to align architecture across teams.",
-            "Participated in technical evaluation and vendor selection for new business units.",
           ],
           technologies: [
             "ASP.NET",
@@ -103,8 +100,23 @@ export const cvEn: CvDictionary = {
             "SQL Server",
             "Oracle",
             "Microsoft Azure",
-            "SAS",
             "Enterprise Architect",
+          ],
+        },
+        {
+          name: "Project Lead",
+          period: "2011 - 2018",
+          contributions: [
+            "Designed integrations across General Insurance and Health/ARS platforms, enabling a unified 360-degree customer view for 500,000+ affiliates.",
+            "Supported enterprise data integration and ETL pipelines using SAS.",
+            "Participated in the technical evaluation and vendor selection for new business units within the group, including Fiduciaria Universal and the Investment Fund Management entity, and later contributed to the development of system integrations.",
+          ],
+          technologies: [
+            "ASP.NET",
+            "C#",
+            "SQL Server",
+            "Oracle",
+            "SAS",
           ],
         },
         {

@@ -89,15 +89,11 @@ export const cvEs: CvDictionary = {
       description: "Uno de los principales grupos financieros en la República Dominicana que ofrece servicios en seguros, salud, inversiones y soluciones de retiro.",
       roles: [
         {
-          name: "Líder de Proyectos",
-          period: "2011 - 2020",
+          name: "Arquitecto de Soluciones",
+          period: "2018 - 2020",
           contributions: [
             "Contribuí a la transformación digital empresarial migrando servicios core de seguros desde sistemas Oracle legacy hacia Microsoft Azure.",
-            "Diseñé integraciones entre plataformas de Seguros Generales y Salud/ARS, habilitando una vista 360 unificada para más de 500,000 afiliados.",
-            "Apoyé integración de datos empresarial y pipelines ETL usando SAS.",
             "Produje modelos UML y documentación técnica para alinear arquitectura entre equipos.",
-            "Participé en evaluación técnica y selección de proveedores para nuevas unidades de negocio.",
-            "Rol previo: Analista de Sistemas dando soporte a plataformas core de seguros (2008 - 2012).",
           ],
           technologies: [
             "ASP.NET",
@@ -105,8 +101,23 @@ export const cvEs: CvDictionary = {
             "SQL Server",
             "Oracle",
             "Microsoft Azure",
-            "SAS",
             "Enterprise Architect",
+          ]
+        },
+        {
+          name: "Líder de Proyectos",
+          period: "2011 - 2018",
+          contributions: [
+            "Diseñé integraciones entre plataformas de Seguros Generales y Salud/ARS, habilitando una vista 360 unificada para más de 500,000 afiliados.",
+            "Apoyé integración de datos empresarial y pipelines ETL usando SAS.",
+            "Participé en la evaluación técnica y selección de proveedores para nuevas unidades de negocio dentro del grupo, incluyendo Fiduciaria Universal y la entidad Administradora de Fondos de Inversión, y posteriormente contribuí al desarrollo de integraciones de sistemas."
+          ],
+          technologies: [
+            "ASP.NET",
+            "C#",
+            "SQL Server",
+            "Oracle",
+            "SAS",
           ]
         },
         {
