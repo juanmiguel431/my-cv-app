@@ -5,14 +5,24 @@ export type IconProps = {
 export type Locale = "en" | "es";
 
 export type Experience = {
-  role: string;
   company: string;
-  period: string;
-  contract?: boolean;
   description: string;
+  contract?: boolean;
+
+  // role: string;
+  // period: string;
+  // contributions: string[];
+  // technologies: string[];
+
+  roles: ExperienceRole[];
+};
+
+export type ExperienceRole = {
+  name: string;
+  period: string;
   contributions: string[];
   technologies: string[];
-};
+}
 
 export type TechGroup = {
   title: string;
