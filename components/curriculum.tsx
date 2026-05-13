@@ -127,9 +127,6 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
           <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2">
-              <span className={`text-xs font-semibold uppercase tracking-wide ${mutedText}`}>
-                {labels.language}
-              </span>
               <div
                 className={`inline-flex rounded-full border p-1 ${
                   isDark ? "border-slate-600 bg-slate-800" : "border-slate-300 bg-white"
