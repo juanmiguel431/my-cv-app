@@ -42,14 +42,12 @@ export const cvEs: CvDictionary = {
           name: "Senior Software Engineer",
           period: "2024 - 2025",
           contributions: [
-            "Mejoré la productividad del equipo con entornos locales de alta fidelidad usando LocalStack y Redis, PostgreSQL y DynamoDB en contenedores.",
-            "Habilité acceso seguro a bases de datos mediante AWS VPN Client para desarrollo local similar a producción.",
-            "Aumenté la cobertura de pruebas automatizadas en servicios Java Spring Boot y Python serverless, estabilizando CI/CD en Bitbucket, AWS CodePipeline y SonarQube.",
-            "Reduje errores de procesamiento SNS/SQS, mejorando la confiabilidad de flujos financieros asíncronos.",
-            "Lideré la estrategia de migración de Java 11 a Java 17 para servicios Spring Boot.",
-            "Implementé controles de idempotencia con Redis para eliminar notificaciones push duplicadas.",
-            "Implementé servicios serverless de evaluación de clientes y scoring de riesgo para cumplimiento KYC, PEP y listas de observación.",
-            "Fortalecí la seguridad de integraciones bancarias moviendo lógica sensible al backend.",
+            "Mejoré la productividad de los desarrolladores al habilitar entornos locales de alta fidelidad utilizando LocalStack y bases de datos contenerizadas (Redis, PostgreSQL, DynamoDB).",
+            "Incrementé la cobertura de pruebas automatizadas en servicios Serverless desarrollados en Java (Spring Boot) y Python, mejorando la confiabilidad del CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
+            "Lideré los esfuerzos de migración de Java 11 a Java 17 para servicios Spring Boot, reduciendo la deuda técnica y mejorando la mantenibilidad.",
+            "Mejoré la confiabilidad de flujos financieros asíncronos al reducir errores de procesamiento en SNS/SQS e implementar controles de idempotencia basados en Redis.",
+            "Desarrollé servicios Serverless de evaluación de clientes y puntuación de riesgo para respaldar flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
+            "Reforcé la seguridad de integraciones bancarias trasladando lógica sensible de procesamiento al Backend."
           ],
           technologies: [
             "AWS",
@@ -73,12 +71,12 @@ export const cvEs: CvDictionary = {
           name: "Senior Software Engineer",
           period: "2021 - 2025",
           contributions: [
-            "Diseñé e implementé APIs REST en .NET/C# con Clean Architecture para mantenibilidad y escalabilidad.",
-            "Arquitecté un Worker Service contenedorizado (.NET + Quartz) para procesos programados y orientados a eventos con ejecución idempotente.",
-            "Diseñé flujos multicanal sensibles al tiempo usando SendGrid, OneSignal, Twilio y SignalR.",
-            "Arquitecté procesamiento por colas con Azure Service Bus para descargar cargas pesadas de las Web APIs.",
-            "Fortalecí el módulo de Chronic Care Management con dashboards y reportes en Excel/PDF.",
-            "Contribuí a soluciones de IA basadas en RAG y plugins usando Semantic Kernel, Azure OpenAI y Azure AI Search.",
+            "Diseñé e implementé APIs RESTful utilizando .NET/C#, aplicando principios de Clean Architecture para garantizar mantenibilidad y escalabilidad.",
+            "Arquitecté un Worker Service contenerizado (.NET + Quartz) para orquestar procesos en segundo plano programados y orientados a eventos, con ejecución idempotente para una recuperación confiable ante fallos.",
+            "Diseñé flujos de notificaciones multicanal sensibles al tiempo (recordatorios, monitoreo y firma de documentos) utilizando SendGrid, OneSignal, Twilio y SignalR, garantizando entregas precisas entre distintas zonas horarias.",
+            "Arquitecté procesamiento basado en colas utilizando Azure Service Bus, descargando tareas pesadas de las Web APIs y mejorando la escalabilidad y capacidad de respuesta del sistema.",
+            "Mejoré el módulo de Chronic Care Management (CCM) mediante Dashboards analíticos y reportes en Excel/PDF.",
+            "Contribuí a iniciativas de IA diseñando e implementando soluciones basadas en RAG y plugins de IA utilizando Semantic Kernel, Azure OpenAI y Azure AI Search, habilitando respuestas contextualizadas y acceso seguro a datos de clientes.",
           ],
           technologies: [".NET", "C#", "Azure", "React", "Next.js", "SQL Server", "Cosmos DB"]
         }
@@ -112,7 +110,7 @@ export const cvEs: CvDictionary = {
           contributions: [
             "Diseñé integraciones entre plataformas de Seguros Generales y Salud/ARS, habilitando una vista 360 unificada para más de 500,000 afiliados.",
             "Apoyé integración de datos empresarial y pipelines ETL usando SAS.",
-            "Participé en la evaluación técnica y selección de proveedores para nuevas unidades de negocio dentro del grupo, incluyendo Fiduciaria Universal y la entidad Administradora de Fondos de Inversión, y posteriormente contribuí al desarrollo de integraciones de sistemas."
+            "Participé en iniciativas de evaluación técnica y selección de proveedores para nuevas unidades de negocio, contribuyendo posteriormente a las integraciones de sistemas."
           ],
           technologies: [
             "ASP.NET",
@@ -126,15 +124,14 @@ export const cvEs: CvDictionary = {
           name: "Analista de Sistemas",
           period: "2008 - 2011",
           contributions: [
-            "Gestioné la resolución de incidentes en producción y corrección de errores de extremo a extremo para plataformas centrales de seguros.",
-            "Colaboré directamente con usuarios de negocio para investigar problemas reportados, validar requerimientos y asegurar la satisfacción del cliente.",
-            "Coordiné pruebas de aceptación de usuario (UAT) y actividades de liberación a producción para correcciones y mejoras de aplicaciones.",
-            "Elaboré documentación técnica y entregables de despliegue para soportar liberaciones controladas en producción.",
-            "Cumplí consistentemente con los objetivos de desempeño basados en métricas de cierre de incidentes e indicadores de satisfacción del cliente."
+            "Gestioné incidentes en producción, corrección de errores y actividades de mantenimiento para plataformas core de seguros desarrolladas con Oracle Forms & Reports.",
+            "Colaboré con usuarios para investigar incidencias, validar requerimientos y coordinar pruebas UAT y despliegues a producción.",
+            "Elaboré documentación técnica y entregables de despliegue, cumpliendo consistentemente con los objetivos de resolución de incidentes y satisfacción del cliente.",
           ],
           technologies: [
-            "Oracle Forms & Reports",
             "Oracle Database",
+            "Oracle Forms & Reports",
+            "PL/SQL",
           ]
         }
       ]
@@ -165,19 +162,19 @@ export const cvEs: CvDictionary = {
             "Impartí sesiones de capacitación técnica para instructores y estudiantes, traduciendo conceptos técnicos en guías accesibles y fáciles de seguir.",
             "Brindé soporte e inducción en herramientas y flujos de trabajo educativos basados en Moodle.",
           ],
-          technologies: ["Moddle"],
+          technologies: ["Moodle"],
         }
       ]
     },
   ],
   techGroups: [
-    { title: "Ingeniería de Software", items: "Desarrollo web Full-Stack / Diseño y Desarrollo de APIs Backend" },
-    { title: "Arquitecturas", items: "Microservicios / Basada en eventos / Serverless" },
+    { title: "Ingeniería de Software", items: "Desarrollo web Full-Stack / Diseño y Desarrollo de Backend APIs" },
+    { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
-    { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
-    { title: "Base de datos", items: "Modelado de Datos (SQL y NoSQL) / SQL Server / PostgreSQL / Amazon DynamoDB / Azure Cosmos DB / Oracle" },
+    { title: "Arquitecturas", items: "Microservicios / Basada en eventos / Serverless" },
     { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / Automatización CI/CD" },
+    { title: "Base de datos", items: "Modelado de Datos (SQL y NoSQL) / SQL Server / PostgreSQL / Amazon DynamoDB / Azure Cosmos DB / Oracle" },
   ],
   education: [
     {
