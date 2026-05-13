@@ -92,6 +92,7 @@ export const cvEn: CvDictionary = {
           period: "2018 - 2020",
           contributions: [
             "Contributed to enterprise digital transformation by migrating core insurance services from legacy Oracle systems to Microsoft Azure.",
+            "Developed analytical dashboards and reports using Microsoft Power BI, integrating heterogeneous data sources including Oracle Database and Microsoft SQL Server to enhance data-driven decision-making across the organization.",
             "Produced UML models and technical documentation to align architecture across teams.",
           ],
           technologies: [
@@ -100,6 +101,7 @@ export const cvEn: CvDictionary = {
             "SQL Server",
             "Oracle",
             "Microsoft Azure",
+            "Microsoft Power BI",
             "Enterprise Architect",
           ],
         },

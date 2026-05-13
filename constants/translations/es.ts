@@ -93,6 +93,7 @@ export const cvEs: CvDictionary = {
           period: "2018 - 2020",
           contributions: [
             "Contribuí a la transformación digital empresarial migrando servicios core de seguros desde sistemas Oracle legacy hacia Microsoft Azure.",
+            "Desarrollé tableros analíticos y reportes utilizando Microsoft Power BI, integrando fuentes de datos heterogéneas como Oracle Database y Microsoft SQL Server para fortalecer la toma de decisiones basada en datos en toda la organización.",
             "Produje modelos UML y documentación técnica para alinear arquitectura entre equipos.",
           ],
           technologies: [
@@ -101,6 +102,7 @@ export const cvEs: CvDictionary = {
             "SQL Server",
             "Oracle",
             "Microsoft Azure",
+            "Microsoft Power BI",
             "Enterprise Architect",
           ]
         },
