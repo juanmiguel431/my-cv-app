@@ -11,6 +11,7 @@ export const cvEs: CvDictionary = {
     twitterTitle: "Juan Miguel Paulino Carpio | CV Ingeniero de Software Senior",
     twitterDescription: "Experiencia profesional, stack técnico y formación académica de Juan Miguel Paulino Carpio.",
   },
+  pdfFileName: "Curriculum - Juan Miguel Paulino - ES.pdf",
   labels: {
     curriculumVitae: "Currículum Vitae",
     themeLight: "Modo claro",
@@ -21,6 +22,7 @@ export const cvEs: CvDictionary = {
     experience: "Experiencia",
     coreSkills: "Habilidades Principales",
     education: "Formación Académica",
+    download: "Descargar",
   },
   profile: {
     name: "Juan Miguel Paulino Carpio",

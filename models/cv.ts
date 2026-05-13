@@ -45,6 +45,7 @@ export type CvLabels = {
   professionalSummary: string;
   experience: string;
   education: string;
+  download: string;
 };
 
 export type CvMetadata = {
@@ -70,6 +71,7 @@ export type CvProfile = {
 
 export type CvDictionary = {
   locale: Locale;
+  pdfFileName: string;
   metadata: CvMetadata;
   labels: CvLabels;
   profile: CvProfile;

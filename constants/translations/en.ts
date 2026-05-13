@@ -11,6 +11,7 @@ export const cvEn: CvDictionary = {
     twitterTitle: "Juan Miguel Paulino Carpio | Senior Software Engineer CV",
     twitterDescription: "Professional experience, technical stack, and education of Juan Miguel Paulino Carpio.",
   },
+  pdfFileName: "Resume - Juan Miguel Paulino - EN.pdf",
   labels: {
     curriculumVitae: "Curriculum Vitae",
     themeLight: "Light mode",
@@ -21,6 +22,7 @@ export const cvEn: CvDictionary = {
     experience: "Work Experience",
     coreSkills: "Core Skills",
     education: "Education",
+    download: "Download",
   },
   profile: {
     name: "Juan Miguel Paulino Carpio",
