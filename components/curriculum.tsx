@@ -109,7 +109,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
     <main
       className={`min-h-screen px-4 py-8 transition-colors duration-300 sm:px-6 lg:px-10 ${pageBg}`}
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-screen-2xl">
         <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
             <p
@@ -281,7 +281,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                             <div>
                               <div className="flex flex-wrap items-center justify-between gap-2">
                                 <p
-                                  className={`text-base font-medium ${
+                                  className={`text-base font-semibold ${
                                     isDark ? "text-cyan-300" : "text-cyan-700"
                                   }`}
                                 >
@@ -348,7 +348,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                   <div className="space-y-3">
                     {education.map((item) => (
                       <div key={item.degree} className={`p-3 ${subtleCard}`}>
-                        <h3 className={`text-sm font-semibold ${sectionTitle}`}>{item.degree}</h3>
+                        <h3 className={`text-base font-semibold ${sectionTitle}`}>{item.degree}</h3>
                         <p className={`mt-1 text-sm ${isDark ? "text-slate-400" : "text-slate-500"}`}>
                           {item.period}
                         </p>
