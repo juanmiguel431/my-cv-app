@@ -32,7 +32,7 @@ export const cvEs: CvDictionary = {
     github: "github.com/juanmiguel431",
     linkedin: "linkedin.com/in/juanmiguel431",
     profileImageAlt: "Foto de perfil de Juan Miguel Paulino Carpio",
-    summary: "Ingeniero de Software Senior con más de 15 años de experiencia diseñando y desarrollando soluciones escalables para las industrias financiera, de seguros y de salud. Experiencia en .NET (C#), Java, Python, TypeScript y React, combinada con conocimientos en la nube en AWS y Azure. Sólida trayectoria en la construcción de plataformas confiables, de alto rendimiento y centradas en el usuario, contribuyendo además a la arquitectura de software y a la toma de decisiones técnicas.",
+    summary: "Ingeniero de Software Senior con más de 15 años de experiencia diseñando y desarrollando soluciones escalables para las industrias financiera, de seguros y de salud. Experiencia en .NET (C#), Java, Python, TypeScript y React, combinada con conocimientos en la nube de AWS y Azure. Sólida trayectoria en la construcción de plataformas confiables, de alto rendimiento y centradas en el usuario, contribuyendo además a la arquitectura de software y a la toma de decisiones técnicas.",
   },
   experiences: [
     {

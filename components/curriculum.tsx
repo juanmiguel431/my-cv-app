@@ -207,7 +207,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               </div>
             </div>
 
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-base">
               <a
                 href={`mailto:${profile.email}`}
                 className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
@@ -253,15 +253,15 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
           <div className="space-y-6">
             <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
                 <SummaryIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.professionalSummary}
               </h2>
-              <p className={`text-sm leading-7 ${mutedText}`}>{profile.summary}</p>
+              <p className={`text-base leading-7 ${mutedText}`}>{profile.summary}</p>
             </article>
 
             <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
                 <ExperienceIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.experience}
               </h2>
@@ -273,15 +273,15 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                     className={`rounded-2xl p-4 ${subtleCard}`}
                   >
                       <div>
-                        <h3 className={`text-base font-bold ${sectionTitle}`}>{experience.company}</h3>
-                        <p className={`mt-3 text-sm leading-6 ${mutedText}`}>{experience.description}</p>
+                        <h3 className={`text-lg font-bold ${sectionTitle}`}>{experience.company}</h3>
+                        <p className={`mt-3 text-base leading-6 ${mutedText}`}>{experience.description}</p>
 
                         {experience.roles.map((role) => (
                           <div key={role.name} className="mt-6">
                             <div>
                               <div className="flex flex-wrap items-center justify-between gap-2">
                                 <p
-                                  className={`text-sm font-medium ${
+                                  className={`text-base font-medium ${
                                     isDark ? "text-cyan-300" : "text-cyan-700"
                                   }`}
                                 >
@@ -289,7 +289,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                                 </p>
 
                                 <div
-                                  className={`flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold ${accentChip}`}
+                                  className={`flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold ${accentChip}`}
                                 >
                                   <CalendarIcon className="h-3.5 w-3.5" />
                                   <span>{role.period}</span>
@@ -298,7 +298,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                             </div>
 
 
-                            <ul className={`mt-3 list-disc space-y-1 pl-5 text-sm leading-6 ${mutedText}`}>
+                            <ul className={`mt-3 list-disc space-y-4 pl-5 text-base leading-6 ${mutedText}`}>
                               {role.contributions.map((contribution) => (
                                 <li key={contribution}>{contribution}</li>
                               ))}
@@ -308,7 +308,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                               {role.technologies.map((tech) => (
                                 <span
                                   key={tech}
-                                  className={`rounded-full px-2.5 py-1 text-xs font-semibold ${accentChip}`}
+                                  className={`rounded-full px-2.5 py-1 text-sm font-medium ${accentChip}`}
                                 >
                                   {tech}
                                 </span>
@@ -325,15 +325,15 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
             <div className="grid gap-6 xl:grid-cols-2">
               <article className={`rounded-3xl p-6 ${card}`}>
-                <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
+                <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
                   <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                   {labels.coreSkills}
                 </h2>
                 <div className="space-y-3">
                   {techGroups.map((group) => (
                     <div key={group.title} className={`p-3 ${subtleCard}`}>
-                      <h3 className={`text-sm font-semibold ${sectionTitle}`}>{group.title}</h3>
-                      <p className={`mt-1 text-sm ${mutedText}`}>{group.items}</p>
+                      <h3 className={`text-base font-semibold ${sectionTitle}`}>{group.title}</h3>
+                      <p className={`mt-1 text-base ${mutedText}`}>{group.items}</p>
                     </div>
                   ))}
                 </div>
@@ -341,7 +341,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
               <div className="space-y-6">
                 <article className={`rounded-3xl p-6 ${card}`}>
-                  <h2 className={`mb-4 flex items-center gap-2 text-lg font-bold ${sectionTitle}`}>
+                  <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
                     <GraduationIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                     {labels.education}
                   </h2>
@@ -349,10 +349,10 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                     {education.map((item) => (
                       <div key={item.degree} className={`p-3 ${subtleCard}`}>
                         <h3 className={`text-sm font-semibold ${sectionTitle}`}>{item.degree}</h3>
-                        <p className={`mt-1 text-xs ${isDark ? "text-slate-400" : "text-slate-500"}`}>
+                        <p className={`mt-1 text-sm ${isDark ? "text-slate-400" : "text-slate-500"}`}>
                           {item.period}
                         </p>
-                        <p className={`mt-1 text-sm ${mutedText}`}>{item.institution}</p>
+                        <p className={`mt-1 text-base ${mutedText}`}>{item.institution}</p>
                       </div>
                     ))}
                   </div>
