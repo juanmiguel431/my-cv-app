@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useSyncExternalStore } from "react";
 
 import {
-  BookIcon,
   CalendarIcon,
   ChipIcon,
   ExperienceIcon,
@@ -86,47 +85,51 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
   const availableLocales: Locale[] = ["en", "es"];
 
   const isDark = theme === "dark";
-  const pageBg = isDark
-    ? "bg-[radial-gradient(circle_at_top,_#0f172a_0%,_#020617_60%,_#020617_100%)] text-slate-100"
-    : "bg-[radial-gradient(circle_at_top,_#cffafe_0%,_#eff6ff_45%,_#f8fafc_100%)] text-slate-900";
-  const card = isDark
-    ? "border border-slate-700/60 bg-slate-900/70 shadow-lg shadow-black/30"
-    : "border border-slate-200/80 bg-white/85 shadow-lg shadow-slate-300/30";
-  const sectionTitle = isDark ? "text-slate-100" : "text-slate-900";
-  const mutedText = isDark ? "text-slate-300" : "text-slate-700";
-  const accentChip = isDark
-    ? "border border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
-    : "border border-cyan-200 bg-cyan-100 text-cyan-800";
-  const heroBadge = isDark
-    ? accentChip
-    : "border border-sky-300 bg-sky-200/90 text-sky-950 shadow-sm shadow-sky-100/70";
-  const heroRoleText = isDark ? "text-cyan-300" : "text-sky-950";
-  const subtleCard = isDark
-    ? "rounded-2xl border border-slate-700/70 bg-slate-800/60"
-    : "rounded-2xl border border-slate-200 bg-slate-50/90";
-  const periodText = isDark
-    ? "text-cyan-200"
-    : "text-cyan-700";
-  const periodLengthText = isDark
-    ? "text-slate-400"
-    : "text-slate-500";
+
+const styles = isDark
+  ? {
+      pageBg: "bg-[radial-gradient(circle_at_top,_#0f172a_0%,_#020617_60%,_#020617_100%)] text-slate-100",
+      card: "border-slate-700/60 bg-slate-900/70 shadow-black/30",
+      sectionTitle: "text-slate-100",
+      mutedText: "text-slate-300",
+      accentChip: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
+      heroBadge: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
+      heroRoleText: "text-cyan-300",
+      subtleCard: "border-slate-700/70 bg-slate-800/60",
+      periodText: "text-cyan-200",
+      periodLengthText: "text-slate-400",
+      linkStyle: `hover:text-cyan-300`,
+    }
+  : {
+      pageBg: "bg-[radial-gradient(circle_at_top,_#cffafe_0%,_#eff6ff_45%,_#f8fafc_100%)] text-slate-900",
+      card: "border-slate-200/80 bg-white/85 shadow-slate-300/30",
+      sectionTitle: "text-slate-900",
+      mutedText: "text-slate-700",
+      accentChip: "border-cyan-200 bg-cyan-100 text-cyan-800",
+      heroBadge: "border-sky-300 bg-sky-200/90 text-sky-950 shadow-sm shadow-sky-100/70",
+      heroRoleText: "text-sky-950",
+      subtleCard: "border-slate-200 bg-slate-50/90",
+      periodText: "text-cyan-700",
+      periodLengthText: "text-slate-500",
+      linkStyle: `hover:text-cyan-600`,
+    };
 
   return (
     <main
-      className={`min-h-screen px-4 py-8 transition-colors duration-300 sm:px-6 lg:px-10 ${pageBg}`}
+      className={`min-h-screen px-4 py-8 transition-colors duration-300 sm:px-6 lg:px-10 ${styles.pageBg}`}
     >
       <div className="mx-auto w-full max-w-screen-2xl">
         <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
             <p
-              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] ${heroBadge}`}
+              className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] border ${styles.heroBadge}`}
             >
               {labels.curriculumVitae}
             </p>
-            <h1 className={`mt-3 text-2xl font-black tracking-tight sm:text-3xl ${sectionTitle}`}>
+            <h1 className={`mt-3 text-2xl font-black tracking-tight sm:text-3xl ${styles.sectionTitle}`}>
               {profile.name}
             </h1>
-            <p className={`mt-1 text-sm font-semibold sm:text-base ${heroRoleText}`}>
+            <p className={`mt-1 text-sm font-semibold sm:text-base ${styles.heroRoleText}`}>
               {profile.role}
             </p>
           </div>
@@ -195,7 +198,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
         </header>
 
         <section className="grid gap-6 lg:grid-cols-[320px_1fr]">
-          <aside className={`rounded-3xl p-6 lg:sticky lg:top-6 lg:h-fit ${card}`}>
+          <aside className={`rounded-3xl p-6 lg:sticky lg:top-6 lg:h-fit border shadow-lg ${styles.card}`}>
             <div className="mx-auto mb-5 flex w-fit items-center justify-center">
               <div
                 className={`relative h-44 w-44 overflow-hidden rounded-full border-4 ${
@@ -216,70 +219,70 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
             <div className="space-y-3 text-base">
               <a
                 href={`mailto:${profile.email}`}
-                className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
+                className={`flex items-center gap-2 rounded-2xl border px-3 py-2 transition ${styles.subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <MailIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                <span className={mutedText}>{profile.email}</span>
+                <span className={styles.mutedText}>{profile.email}</span>
               </a>
               <a
                 href={phoneHref}
-                className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
+                className={`flex items-center gap-2 rounded-2xl border px-3 py-2 transition ${styles.subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <PhoneIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                <span className={mutedText}>{profile.phone}</span>
+                <span className={styles.mutedText}>{profile.phone}</span>
               </a>
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
+                className={`flex items-center gap-2 rounded-2xl border px-3 py-2 transition ${styles.subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <GithubIcon className="h-4 w-4" />
-                <span className={mutedText}>{profile.github}</span>
+                <span className={styles.mutedText}>{profile.github}</span>
               </a>
               <a
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${subtleCard} ${
+                className={`flex items-center gap-2 rounded-2xl border px-3 py-2 transition ${styles.subtleCard} ${
                   isDark ? "hover:border-cyan-400/50" : "hover:border-cyan-300"
                 }`}
               >
                 <LinkedinIcon className="h-4 w-4" />
-                <span className={mutedText}>{profile.linkedin}</span>
+                <span className={styles.mutedText}>{profile.linkedin}</span>
               </a>
             </div>
           </aside>
 
           <div className="space-y-6">
-            <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+            <article className={`rounded-3xl p-6 border shadow-lg ${styles.card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${styles.sectionTitle}`}>
                 <SummaryIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.professionalSummary}
               </h2>
-              <p className={`text-base leading-7 ${mutedText}`}>{profile.summary}</p>
+              <p className={`text-base leading-7 ${styles.mutedText}`}>{profile.summary}</p>
             </article>
 
-            <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+            <article className={`rounded-3xl p-6 border shadow-lg ${styles.card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${styles.sectionTitle}`}>
                 <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.coreSkills}
               </h2>
 
               <div className="grid gap-3 md:grid-flow-col md:grid-rows-3">
                 {techGroups.map((group) => (
-                  <div key={group.title} className={`p-3 ${subtleCard}`}>
-                    <h3 className={`text-base font-semibold ${sectionTitle}`}>
+                  <div key={group.title} className={`rounded-2xl border p-3 ${styles.subtleCard}`}>
+                    <h3 className={`text-base font-semibold ${styles.sectionTitle}`}>
                       {group.title}
                     </h3>
 
-                    <p className={`mt-1 text-base ${mutedText}`}>
+                    <p className={`mt-1 text-base ${styles.mutedText}`}>
                       {group.items}
                     </p>
                   </div>
@@ -287,8 +290,8 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               </div>
             </article>
 
-            <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+            <article className={`rounded-3xl p-6 border shadow-lg ${styles.card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${styles.sectionTitle}`}>
                 <ExperienceIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.experience}
               </h2>
@@ -297,11 +300,20 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
                   <section
                     key={experience.company}
-                    className={`rounded-2xl p-4 ${subtleCard}`}
+                    className={`rounded-2xl border p-4 ${styles.subtleCard}`}
                   >
                       <div>
-                        <h3 className={`text-lg font-bold ${sectionTitle}`}>{experience.company}</h3>
-                        <p className={`mt-3 text-base leading-6 ${mutedText}`}>{experience.description}</p>
+                        <h3 className={`text-lg font-bold ${styles.sectionTitle}`}>
+                          <a
+                            href={experience.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={`transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                          >
+                            {experience.company}
+                          </a>
+                        </h3>
+                        <p className={`mt-3 text-base leading-6 ${styles.mutedText}`}>{experience.description}</p>
 
                         {experience.roles.map((role) => (
                           <div key={role.name} className="mt-6">
@@ -317,14 +329,14 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
                                 <div className="mt-1 flex items-center">
                                   <div
-                                    className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
+                                    className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${styles.periodText}`}
                                   >
                                     <CalendarIcon className="h-3.5 w-3.5" />
                                     <span>{role.period}</span>
                                   </div>
 
                                   <span
-                                    className={`ml-1 text-xs font-medium ${periodLengthText}`}
+                                    className={`ml-1 text-xs font-medium ${styles.periodLengthText}`}
                                   >
                                     · {role.periodLength}
                                   </span>
@@ -333,7 +345,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                             </div>
 
 
-                            <ul className={`mt-3 list-disc space-y-4 pl-5 text-base leading-6 ${mutedText}`}>
+                            <ul className={`mt-3 list-disc space-y-4 pl-5 text-base leading-6 ${styles.mutedText}`}>
                               {role.contributions.map((contribution) => (
                                 <li key={contribution}>{contribution}</li>
                               ))}
@@ -343,7 +355,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                               {role.technologies.map((tech) => (
                                 <span
                                   key={tech}
-                                  className={`rounded-full px-2.5 py-1 text-sm font-medium ${accentChip}`}
+                                  className={`rounded-full px-2.5 py-1 text-sm font-medium border ${styles.accentChip}`}
                                 >
                                   {tech}
                                 </span>
@@ -358,24 +370,33 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               </div>
             </article>
 
-            <article className={`rounded-3xl p-6 ${card}`}>
-              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+            <article className={`rounded-3xl p-6 border shadow-lg ${styles.card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${styles.sectionTitle}`}>
                 <GraduationIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.education}
               </h2>
               <div className="space-y-3">
                 {education.map((item) => (
-                  <div key={item.degree} className={`p-3 ${subtleCard}`}>
-                    <h3 className={`text-base font-semibold ${sectionTitle}`}>{item.degree}</h3>
+                  <div key={item.degree} className={`rounded-2xl border p-3 ${styles.subtleCard}`}>
+                    <h3 className={`text-base font-semibold ${styles.sectionTitle}`}>{item.degree}</h3>
 
                     <div
-                      className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
+                      className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${styles.periodText}`}
                     >
                       <CalendarIcon className="h-3.5 w-3.5" />
                       <span>{item.period}</span>
                     </div>
 
-                    <p className={`mt-1 text-base ${mutedText}`}>{item.institution}</p>
+                    <p className={`mt-1 text-base ${styles.mutedText}`}>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                      >
+                        {item.institution}
+                      </a>
+                    </p>
                   </div>
                 ))}
               </div>

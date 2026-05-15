@@ -6,14 +6,9 @@ export type Locale = "en" | "es";
 
 export type Experience = {
   company: string;
+  url: string;
   description: string;
   contract?: boolean;
-
-  // role: string;
-  // period: string;
-  // contributions: string[];
-  // technologies: string[];
-
   roles: ExperienceRole[];
 };
 
@@ -34,6 +29,7 @@ export type Education = {
   degree: string;
   period: string;
   institution: string;
+  url: string;
 };
 
 export type CvLabels = {

@@ -37,6 +37,7 @@ export const cvEn: CvDictionary = {
   experiences: [
     {
       company: "Billet",
+      url: "https://billet.do",
       contract: true,
       description: "Fintech platform for digital payments and financial services, enabling real-time transactions, customer onboarding, and regulatory compliance through integrations with banking systems (e.g., Banco BHD).",
       roles: [
@@ -67,6 +68,7 @@ export const cvEn: CvDictionary = {
     },
     {
       company: "Member Care",
+      url: "https://www.membercare.net",
       description: "Multi-tenant healthcare platform connecting patients, providers, and care teams through scalable, event-driven architecture.",
       roles: [
         {
@@ -87,6 +89,7 @@ export const cvEn: CvDictionary = {
     },
     {
       company: "Grupo Universal",
+      url: "https://universal.com.do",
       description: "One of the leading financial groups in the Dominican Republic, offering services across insurance, health, investments, and retirement solutions.",
       roles: [
         {
@@ -144,6 +147,7 @@ export const cvEn: CvDictionary = {
     },
     {
       company: "Technological Institute of the Americas - ITLA",
+      url: "https://itla.edu.do",
       description: "A leading technical institute in the Dominican Republic specializing in information technology, software development, cybersecurity, and digital innovation programs.",
       roles: [
         {
@@ -160,6 +164,7 @@ export const cvEn: CvDictionary = {
     },
     {
       company: "Ibero-American University - UNIBE",
+      url: "https://www.unibe.edu.do",
       description: "A private university in the Dominican Republic recognized for its programs in technology, engineering, business, and health sciences.",
       roles: [
         {
@@ -188,11 +193,13 @@ export const cvEn: CvDictionary = {
       degree: "Bachelor’s Degree in Information and Communication Technology Engineering",
       period: "2007 - 2011",
       institution: "Ibero-American University (UNIBE)",
+      url: "https://www.unibe.edu.do",
     },
     {
       degree: "Associate Degree in Industrial Electronics (Digital Systems)",
       period: "2003 - 2007",
       institution: "Loyola Polytechnical Institute (IPL)",
+      url: "https://ipl.edu.do",
     },
   ]
 };

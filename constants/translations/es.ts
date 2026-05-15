@@ -37,6 +37,7 @@ export const cvEs: CvDictionary = {
   experiences: [
     {
       company: "Billet",
+      url: "https://billet.do",
       contract: true,
       description: "Plataforma fintech para pagos digitales y servicios financieros, habilitando transacciones en tiempo real, onboarding de clientes y cumplimiento regulatorio mediante integraciones con sistemas bancarios (p. ej., Banco BHD).",
       roles: [
@@ -68,6 +69,7 @@ export const cvEs: CvDictionary = {
     },
     {
       company: "Member Care",
+      url: "https://www.membercare.net",
       description: "Plataforma de salud multi-tenant que conecta pacientes, proveedores y equipos de cuidado con una arquitectura escalable orientada a eventos.",
       roles: [
         {
@@ -88,6 +90,7 @@ export const cvEs: CvDictionary = {
     },
     {
       company: "Grupo Universal",
+      url: "https://universal.com.do",
       description: "Uno de los principales grupos financieros en la República Dominicana que ofrece servicios en seguros, salud, inversiones y soluciones de retiro.",
       roles: [
         {
@@ -145,6 +148,7 @@ export const cvEs: CvDictionary = {
     },
     {
       company: "Instituto Tecnológico de las Américas - ITLA",
+      url: "https://itla.edu.do",
       description: "Un instituto técnico líder en la República Dominicana, especializado en tecnologías de la información, desarrollo de software, ciberseguridad e innovación digital.",
       roles: [
         {
@@ -161,6 +165,7 @@ export const cvEs: CvDictionary = {
     },
     {
       company: "Universidad Iberoamericana - UNIBE",
+      url: "https://www.unibe.edu.do",
       description: "Universidad privada en la República Dominicana reconocida por sus programas en tecnología, ingeniería, negocios y ciencias de la salud.",
       roles: [
         {
@@ -189,11 +194,13 @@ export const cvEs: CvDictionary = {
       degree: "Ingeniería en Tecnologías de la Información y Comunicación",
       period: "2007 - 2011",
       institution: "Universidad Iberoamericana (UNIBE)",
+      url: "https://www.unibe.edu.do",
     },
     {
       degree: "Tecnólogo en Electrónica Industrial (Sistemas Digitales)",
       period: "2003 - 2007",
       institution: "Instituto Politécnico Loyola (IPL)",
+      url: "https://ipl.edu.do",
     },
   ]
 };
