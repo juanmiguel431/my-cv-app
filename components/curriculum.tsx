@@ -8,6 +8,7 @@ import {
   CalendarIcon,
   ChipIcon,
   ExperienceIcon,
+  ExternalLinkIcon,
   GithubIcon,
   GraduationIcon,
   LinkedinIcon,
@@ -170,10 +171,10 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
             <button
               type="button"
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition border ${
                 isDark
-                  ? "border border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
-                  : "border border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
+                  ? "border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
+                  : "border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
               }`}
             >
               <span aria-hidden="true">
@@ -185,10 +186,10 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
             <a
               href={`/cv/${pdfFileName}`}
               download
-              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition border ${
                 isDark
-                  ? "border border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
-                  : "border border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
+                  ? "border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
+                  : "border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
               }`}
             >
               {labels.download}
@@ -308,9 +309,9 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                             href={experience.url}
                             target="_blank"
                             rel="noreferrer"
-                            className={`transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                            className={`group inline-flex items-center gap-2 transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
                           >
-                            {experience.company}
+                            {experience.company} <ExternalLinkIcon className="h-4 w-4"/>
                           </a>
                         </h3>
                         <p className={`mt-3 text-base leading-6 ${styles.mutedText}`}>{experience.description}</p>
@@ -392,9 +393,9 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                         href={item.url}
                         target="_blank"
                         rel="noreferrer"
-                        className={`transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                        className={`inline-flex items-center gap-2 transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
                       >
-                        {item.institution}
+                        {item.institution} <ExternalLinkIcon className="h-4 w-4"/>
                       </a>
                     </p>
                   </div>
