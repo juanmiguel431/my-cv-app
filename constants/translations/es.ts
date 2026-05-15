@@ -186,7 +186,7 @@ export const cvEs: CvDictionary = {
   ],
   education: [
     {
-      degree: "Licenciatura en Tecnologías de la Información y Comunicación (TIC)",
+      degree: "Ingeniería en Tecnologías de la Información y Comunicación",
       period: "2007 - 2011",
       institution: "Universidad Iberoamericana (UNIBE)",
     },

@@ -185,12 +185,12 @@ export const cvEn: CvDictionary = {
   ],
   education: [
     {
-      degree: "Bachelor's Degree in Information and Communication Technologies (ICT)",
+      degree: "Bachelor’s Degree in Information and Communication Technology Engineering",
       period: "2007 - 2011",
       institution: "Ibero-American University (UNIBE)",
     },
     {
-      degree: "Industrial Electronics Technologist (Digital Systems)",
+      degree: "Associate Degree in Industrial Electronics (Digital Systems)",
       period: "2003 - 2007",
       institution: "Loyola Polytechnical Institute (IPL)",
     },
