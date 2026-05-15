@@ -20,6 +20,7 @@ export type Experience = {
 export type ExperienceRole = {
   name: string;
   period: string;
+  periodLength: string;
   contributions: string[];
   technologies: string[];
 }

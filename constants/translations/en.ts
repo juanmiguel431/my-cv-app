@@ -42,7 +42,8 @@ export const cvEn: CvDictionary = {
       roles: [
         {
           name: "Senior Software Engineer",
-          period: "2024 - 2025",
+          period: "Sep 2024 - Dec 2025",
+          periodLength: "1 year 4 months",
           contributions: [
             "Improved developer productivity by enabling high-fidelity local environments using LocalStack and containerized databases (Redis, PostgreSQL, DynamoDB).",
             "Increased automated test coverage across Java (Spring Boot) and Python serverless services, improving CI/CD reliability with Bitbucket, AWS CodePipeline, and SonarQube.",
@@ -70,7 +71,8 @@ export const cvEn: CvDictionary = {
       roles: [
         {
           name: "Senior Software Engineer",
-          period: "2021 - 2025",
+          period: "Sep 2020 - Jan 2026",
+          periodLength: "5 years 5 months",
           contributions: [
             "Designed and implemented RESTful APIs in .NET/C# with Clean Architecture for maintainability and scalability.",
             "Architected a containerized Worker Service (.NET + Quartz) for scheduled and event-driven jobs with idempotent execution.",
@@ -89,7 +91,8 @@ export const cvEn: CvDictionary = {
       roles: [
         {
           name: "Solutions Architect",
-          period: "2018 - 2020",
+          period: "Jan 2018 - Nov 2020",
+          periodLength: "2 years 11 months",
           contributions: [
             "Contributed to enterprise digital transformation by migrating core insurance services from legacy Oracle systems to Microsoft Azure.",
             "Developed analytical dashboards and reports using Microsoft Power BI, integrating heterogeneous data sources including Oracle Database and Microsoft SQL Server to enhance data-driven decision-making across the organization.",
@@ -107,7 +110,8 @@ export const cvEn: CvDictionary = {
         },
         {
           name: "Project Lead",
-          period: "2011 - 2018",
+          period: "Jan 2012 - Dec 2017",
+          periodLength: "6 years",
           contributions: [
             "Designed integrations across General Insurance and Health/ARS platforms, enabling a unified 360-degree customer view for 500,000+ affiliates.",
             "Supported enterprise data integration and ETL pipelines using SAS.",
@@ -123,7 +127,8 @@ export const cvEn: CvDictionary = {
         },
         {
           name: "Systems Analyst",
-          period: "2008 - 2011",
+          period: "Nov 2008 - Dec 2011",
+          periodLength: "3 years 2 months",
           contributions: [
             "Managed production incidents, bug fixes, and maintenance activities for core insurance platforms built with Oracle Forms & Reports.",
             "Collaborated with users to investigate issues, validate requirements, and coordinate UAT and production releases.",
@@ -143,7 +148,8 @@ export const cvEn: CvDictionary = {
       roles: [
         {
           name: "IT Instructor",
-          period: "2019",
+          period: "Jun 2018 - Mar 2019",
+          periodLength: "10 months",
           contributions: [
             "Taught programming courses in C#, Java, and database fundamentals to students with varying technical backgrounds.",
             "Developed practical and beginner-friendly learning materials to simplify complex programming concepts and improve student engagement.",
@@ -158,7 +164,8 @@ export const cvEn: CvDictionary = {
       roles: [
         {
           name: "Technical Instructor",
-          period: "2008",
+          period: "Jan 2008 - Oct 2008",
+          periodLength: "10 months",
           contributions: [
             "Delivered technical training sessions for instructors and students, translating technical concepts into accessible and easy-to-follow guidance.",
             "Provided support and onboarding for Moodle-based educational tools and workflows.",

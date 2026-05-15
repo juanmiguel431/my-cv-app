@@ -104,6 +104,12 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
   const subtleCard = isDark
     ? "rounded-2xl border border-slate-700/70 bg-slate-800/60"
     : "rounded-2xl border border-slate-200 bg-slate-50/90";
+  const periodText = isDark
+    ? "text-cyan-200"
+    : "text-cyan-700";
+  const periodLengthText = isDark
+    ? "text-slate-400"
+    : "text-slate-500";
 
   return (
     <main
@@ -279,7 +285,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                         {experience.roles.map((role) => (
                           <div key={role.name} className="mt-6">
                             <div>
-                              <div className="flex flex-wrap items-center justify-between gap-2">
+                              <div>
                                 <p
                                   className={`text-base font-semibold ${
                                     isDark ? "text-cyan-300" : "text-cyan-700"
@@ -288,11 +294,19 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                                   {role.name}
                                 </p>
 
-                                <div
-                                  className={`flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold ${accentChip}`}
-                                >
-                                  <CalendarIcon className="h-3.5 w-3.5" />
-                                  <span>{role.period}</span>
+                                <div className="mt-1 flex items-center">
+                                  <div
+                                    className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
+                                  >
+                                    <CalendarIcon className="h-3.5 w-3.5" />
+                                    <span>{role.period}</span>
+                                  </div>
+
+                                  <span
+                                    className={`ml-1 text-xs font-medium ${periodLengthText}`}
+                                  >
+                                    · {role.periodLength}
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -349,9 +363,14 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                     {education.map((item) => (
                       <div key={item.degree} className={`p-3 ${subtleCard}`}>
                         <h3 className={`text-base font-semibold ${sectionTitle}`}>{item.degree}</h3>
-                        <p className={`mt-1 text-sm ${isDark ? "text-slate-400" : "text-slate-500"}`}>
-                          {item.period}
-                        </p>
+
+                        <div
+                          className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
+                        >
+                          <CalendarIcon className="h-3.5 w-3.5" />
+                          <span>{item.period}</span>
+                        </div>
+
                         <p className={`mt-1 text-base ${mutedText}`}>{item.institution}</p>
                       </div>
                     ))}
