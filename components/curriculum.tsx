@@ -268,6 +268,27 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
             <article className={`rounded-3xl p-6 ${card}`}>
               <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+                <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
+                {labels.coreSkills}
+              </h2>
+
+              <div className="grid gap-3 md:grid-flow-col md:grid-rows-3">
+                {techGroups.map((group) => (
+                  <div key={group.title} className={`p-3 ${subtleCard}`}>
+                    <h3 className={`text-base font-semibold ${sectionTitle}`}>
+                      {group.title}
+                    </h3>
+
+                    <p className={`mt-1 text-base ${mutedText}`}>
+                      {group.items}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            <article className={`rounded-3xl p-6 ${card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
                 <ExperienceIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
                 {labels.experience}
               </h2>
@@ -337,47 +358,35 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
               </div>
             </article>
 
-            <div className="grid gap-6 xl:grid-cols-2">
-              <article className={`rounded-3xl p-6 ${card}`}>
-                <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
-                  <ChipIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                  {labels.coreSkills}
-                </h2>
-                <div className="space-y-3">
-                  {techGroups.map((group) => (
-                    <div key={group.title} className={`p-3 ${subtleCard}`}>
-                      <h3 className={`text-base font-semibold ${sectionTitle}`}>{group.title}</h3>
-                      <p className={`mt-1 text-base ${mutedText}`}>{group.items}</p>
+            <article className={`rounded-3xl p-6 ${card}`}>
+              <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
+                <GraduationIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
+                {labels.education}
+              </h2>
+              <div className="space-y-3">
+                {education.map((item) => (
+                  <div key={item.degree} className={`p-3 ${subtleCard}`}>
+                    <h3 className={`text-base font-semibold ${sectionTitle}`}>{item.degree}</h3>
+
+                    <div
+                      className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
+                    >
+                      <CalendarIcon className="h-3.5 w-3.5" />
+                      <span>{item.period}</span>
                     </div>
-                  ))}
-                </div>
-              </article>
 
-              <div className="space-y-6">
-                <article className={`rounded-3xl p-6 ${card}`}>
-                  <h2 className={`mb-4 flex items-center gap-2 text-xl font-bold ${sectionTitle}`}>
-                    <GraduationIcon className={`h-5 w-5 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
-                    {labels.education}
-                  </h2>
-                  <div className="space-y-3">
-                    {education.map((item) => (
-                      <div key={item.degree} className={`p-3 ${subtleCard}`}>
-                        <h3 className={`text-base font-semibold ${sectionTitle}`}>{item.degree}</h3>
-
-                        <div
-                          className={`inline-flex items-center gap-1  py-1 text-sm font-semibold ${periodText}`}
-                        >
-                          <CalendarIcon className="h-3.5 w-3.5" />
-                          <span>{item.period}</span>
-                        </div>
-
-                        <p className={`mt-1 text-base ${mutedText}`}>{item.institution}</p>
-                      </div>
-                    ))}
+                    <p className={`mt-1 text-base ${mutedText}`}>{item.institution}</p>
                   </div>
-                </article>
+                ))}
+              </div>
+            </article>
+
+
+            <div className="grid gap-6 xl:grid-cols-2">
+              <div className="space-y-6">
               </div>
             </div>
+
           </div>
         </section>
       </div>

@@ -177,13 +177,12 @@ export const cvEs: CvDictionary = {
     },
   ],
   techGroups: [
-    { title: "Ingeniería de Software", items: "Desarrollo web Full-Stack / Diseño y Desarrollo de Backend APIs" },
     { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
     { title: "Arquitecturas", items: "Microservicios / Basada en eventos / Serverless" },
     { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / Automatización CI/CD" },
-    { title: "Base de datos", items: "Modelado de Datos (SQL y NoSQL) / SQL Server / PostgreSQL / Amazon DynamoDB / Azure Cosmos DB / Oracle" },
+    { title: "Base de datos", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle" },
   ],
   education: [
     {
