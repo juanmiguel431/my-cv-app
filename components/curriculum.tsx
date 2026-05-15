@@ -86,33 +86,33 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
 
   const isDark = theme === "dark";
 
-const styles = isDark
-  ? {
-      pageBg: "bg-[radial-gradient(circle_at_top,_#0f172a_0%,_#020617_60%,_#020617_100%)] text-slate-100",
-      card: "border-slate-700/60 bg-slate-900/70 shadow-black/30",
-      sectionTitle: "text-slate-100",
-      mutedText: "text-slate-300",
-      accentChip: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
-      heroBadge: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
-      heroRoleText: "text-cyan-300",
-      subtleCard: "border-slate-700/70 bg-slate-800/60",
-      periodText: "text-cyan-200",
-      periodLengthText: "text-slate-400",
-      linkStyle: `hover:text-cyan-300`,
-    }
-  : {
-      pageBg: "bg-[radial-gradient(circle_at_top,_#cffafe_0%,_#eff6ff_45%,_#f8fafc_100%)] text-slate-900",
-      card: "border-slate-200/80 bg-white/85 shadow-slate-300/30",
-      sectionTitle: "text-slate-900",
-      mutedText: "text-slate-700",
-      accentChip: "border-cyan-200 bg-cyan-100 text-cyan-800",
-      heroBadge: "border-sky-300 bg-sky-200/90 text-sky-950 shadow-sm shadow-sky-100/70",
-      heroRoleText: "text-sky-950",
-      subtleCard: "border-slate-200 bg-slate-50/90",
-      periodText: "text-cyan-700",
-      periodLengthText: "text-slate-500",
-      linkStyle: `hover:text-cyan-600`,
-    };
+  const styles = isDark
+    ? {
+        pageBg: "bg-[radial-gradient(circle_at_top,_#0f172a_0%,_#020617_60%,_#020617_100%)] text-slate-100",
+        card: "border-slate-700/60 bg-slate-900/70 shadow-black/30",
+        sectionTitle: "text-slate-100",
+        mutedText: "text-slate-300",
+        accentChip: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
+        heroBadge: "border-cyan-400/30 bg-cyan-400/10 text-cyan-300",
+        heroRoleText: "text-cyan-300",
+        subtleCard: "border-slate-700/70 bg-slate-800/60",
+        periodText: "text-cyan-200",
+        periodLengthText: "text-slate-400",
+        linkStyle: `hover:text-cyan-300`,
+      }
+    : {
+        pageBg: "bg-[radial-gradient(circle_at_top,_#cffafe_0%,_#eff6ff_45%,_#f8fafc_100%)] text-slate-900",
+        card: "border-slate-200/80 bg-white/85 shadow-slate-300/30",
+        sectionTitle: "text-slate-900",
+        mutedText: "text-slate-700",
+        accentChip: "border-cyan-200 bg-cyan-100 text-cyan-800",
+        heroBadge: "border-sky-300 bg-sky-200/90 text-sky-950 shadow-sm shadow-sky-100/70",
+        heroRoleText: "text-sky-950",
+        subtleCard: "border-slate-200 bg-slate-50/90",
+        periodText: "text-cyan-700",
+        periodLengthText: "text-slate-500",
+        linkStyle: `hover:text-cyan-600`,
+      };
 
   return (
     <main
