@@ -13,7 +13,7 @@ export const cvEn: CvDictionary = {
   },
   pdfFileName: "Resume - Juan Miguel Paulino - EN.pdf",
   labels: {
-    curriculumVitae: "Curriculum Vitae",
+    curriculumVitae: "Resume",
     themeLight: "Light mode",
     themeDark: "Dark mode",
     language: "Language",
