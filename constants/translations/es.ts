@@ -32,8 +32,16 @@ export const cvEs: CvDictionary = {
     github: "github.com/juanmiguel431",
     linkedin: "linkedin.com/in/juanmiguel431",
     profileImageAlt: "Foto de perfil de Juan Miguel Paulino Carpio",
-    summary: "Ingeniero de Software Senior con más de 15 años de experiencia diseñando y desarrollando soluciones escalables para las industrias financiera, de seguros y de salud. Experiencia en .NET (C#), Java, Python, TypeScript y React, combinada con conocimientos en la nube de AWS y Azure. Sólida trayectoria en la construcción de plataformas confiables, de alto rendimiento y centradas en el usuario, contribuyendo además a la arquitectura de software y a la toma de decisiones técnicas.",
+    summary: "Ingeniero de Software Senior con más de 15 años de experiencia desarrollando aplicaciones empresariales y cloud-native utilizando .NET, Java, Python, TypeScript, React, AWS y Azure. Sólida experiencia en sistemas distribuidos y arquitecturas backend escalables, enfocado en construir aplicaciones confiables, seguras y de alto rendimiento con un fuerte énfasis en la experiencia de usuario. Experiencia desarrollando soluciones para las industrias fintech, seguros y salud.",
   },
+  techGroups: [
+    { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
+    { title: "Backend", items: ".NET / Spring Boot" },
+    { title: "Frontend", items: "React / Next.js / React Native" },
+    { title: "Arquitecturas", items: "Microservicios / Monolito Modular / SaaS Multi-tenant / Basada en eventos / Serverless" },
+    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / Automatización CI/CD" },
+    { title: "Base de datos", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle Database" },
+  ],
   experiences: [
     {
       company: "Billet",
@@ -48,20 +56,50 @@ export const cvEs: CvDictionary = {
           contributions: [
             "Mejoré la productividad de los desarrolladores al habilitar entornos locales de alta fidelidad utilizando LocalStack y bases de datos contenerizadas (Redis, PostgreSQL, DynamoDB).",
             "Incrementé la cobertura de pruebas automatizadas en servicios Serverless desarrollados en Java (Spring Boot) y Python, mejorando la confiabilidad del CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
-            "Lideré los esfuerzos de migración de Java 11 a Java 17 para servicios Spring Boot, reduciendo la deuda técnica y mejorando la mantenibilidad.",
+            "Lideré la migración de servicios Spring Boot de Java 11 a 17, reduciendo deuda técnica y optimizando el mantenimiento.",
             "Mejoré la confiabilidad de flujos financieros asíncronos al reducir errores de procesamiento en SNS/SQS e implementar controles de idempotencia basados en Redis.",
-            "Desarrollé servicios Serverless de evaluación de clientes y puntuación de riesgo para respaldar flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
+            "Desarrollé servicios de evaluación de clientes y riesgo para flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
             "Reforcé la seguridad de integraciones bancarias trasladando lógica sensible de procesamiento al Backend."
           ],
           technologies: [
-            "AWS",
+            // Backend & Languages
             "Java",
-            "Python",
             "Spring Boot",
-            "Serverless",
-            "Docker",
-            "Redis",
+            "Python",
+
+            // Frontend
             "React Native",
+
+            // Cloud & Infrastructure
+            "AWS",
+            "EC2",
+            "Lambda",
+            "API Gateway",
+            "S3",
+            "SNS",
+            "SQS",
+            "CloudWatch",
+            "Parameter Store",
+            "Secrets Manager",
+            "Cognito",
+
+            // Databases & Caching
+            "PostgreSQL",
+            "DynamoDB",
+            "Redis",
+
+            // DevOps & Deployment
+            "Docker",
+            "LocalStack",
+            "Serverless Framework",
+            "CodePipeline",
+            "SonarQube",
+
+            // Collaboration & Methodologies
+            "Git",
+            "Bitbucket",
+            "Jira",
+            "Confluence",
           ],
         }
       ],
@@ -77,14 +115,102 @@ export const cvEs: CvDictionary = {
           period: "Sep 2020 - Ene 2026",
           periodLength: "5 años 5 meses",
           contributions: [
-            "Diseñé e implementé APIs RESTful utilizando .NET/C#, aplicando principios de Clean Architecture para garantizar mantenibilidad y escalabilidad.",
+            "Desarrollé APIs RESTful utilizando .NET/C#, con enfoque en mantenibilidad, escalabilidad y principios de código limpio.",
             "Arquitecté un Worker Service contenerizado (.NET + Quartz) para orquestar procesos en segundo plano programados y orientados a eventos, con ejecución idempotente para una recuperación confiable ante fallos.",
             "Diseñé flujos de notificaciones multicanal sensibles al tiempo (recordatorios, monitoreo y firma de documentos) utilizando SendGrid, OneSignal, Twilio y SignalR, garantizando entregas precisas entre distintas zonas horarias.",
             "Arquitecté procesamiento basado en colas utilizando Azure Service Bus, descargando tareas pesadas de las Web APIs y mejorando la escalabilidad y capacidad de respuesta del sistema.",
             "Mejoré el módulo de Chronic Care Management (CCM) mediante Dashboards analíticos y reportes en Excel/PDF.",
             "Contribuí a iniciativas de IA diseñando e implementando soluciones basadas en RAG y plugins de IA utilizando Semantic Kernel, Azure OpenAI y Azure AI Search, habilitando respuestas contextualizadas y acceso seguro a datos de clientes.",
           ],
-          technologies: [".NET", "C#", "Azure", "React", "Next.js", "SQL Server", "Cosmos DB"]
+          technologies: [
+            // Backend & Languages
+            ".NET",
+            "C#",
+
+            // AI & LLM
+            "Semantic Kernel",
+            "OpenAI",
+            "RAG",
+            "Azure AI Search",
+
+            // Frontend
+            "React",
+            "Next.js",
+            "TypeScript",
+
+            // UI Libraries & State Management
+            "Ant Design",
+            "MobX",
+            "Axios",
+            "ApexCharts",
+
+            // Cloud & Azure Services
+            "Azure App Service",
+            "Azure Service Bus",
+            "Azure Service Fabric",
+            "Azure Blob Storage",
+            "Azure Application Insights",
+
+            // Databases & Caching
+            "SQL Server",
+            "Cosmos DB",
+            "Redis",
+
+            "SignalR",
+
+            // Background Jobs & Processing
+            "Quartz.NET",
+
+            // Documents & Reporting
+            "GemBox Document",
+            "QuestPDF",
+
+            // Notifications & Communication
+            "SendGrid",
+            "OneSignal",
+            "Twilio SMS",
+
+            // DevOps & Tooling
+            "Docker",
+            "Rush Monorepo",
+            "Azure DevOps",
+            "Git",
+          ]
+        }
+      ]
+    },
+    {
+      company: "Plataforma de Campaña Política",
+      url: "",
+      description: "Plataforma web a la medida desarrollada para un movimiento político presidencial con el objetivo de gestionar la inscripción de miembros, el seguimiento del crecimiento regional y campañas de comunicación segmentadas.",
+      roles: [
+        {
+          name: "Senior Software Engineer",
+          period: "Oct 2018 - Mar 2020",
+          periodLength: "1 año 6 meses",
+          contributions: [
+            "Diseñé y desarrollé una plataforma Web Responsive optimizada para flujos de trabajo en computadoras, tabletas y dispositivos móviles, orientada a soportar operaciones de inscripción de campañas políticas a gran escala.",
+            "Implementé un sistema jerárquico de referencias de miembros, permitiendo a los administradores medir el rendimiento de reclutamiento y visualizar el crecimiento regional por provincia.",
+            "Construí funcionalidades de segmentación de audiencia y notificaciones para campañas de comunicación dirigidas según grupos y regiones geográficas.",
+            "Integré WordPress como portal de gestión de contenido para publicar noticias y actualizaciones del movimiento.",
+            "Gestioné el despliegue y mantenimiento de infraestructura Linux en servidores de DigitalOcean.",
+            "Integré Mailgun para la entrega de correos transaccionales y campañas de comunicación masiva.",
+          ],
+          technologies: [
+            "Laravel",
+            "PHP",
+            "MySQL",
+            "Apache",
+            "Ubuntu",
+            "DigitalOcean",
+            "Mailgun",
+            "WordPress",
+            "JavaScript",
+            "jQuery",
+            "Materialize CSS",
+            "Supervisor",
+            "phpMyAdmin",
+          ],
         }
       ]
     },
@@ -103,12 +229,30 @@ export const cvEs: CvDictionary = {
             "Produje modelos UML y documentación técnica para alinear arquitectura entre equipos.",
           ],
           technologies: [
-            "ASP.NET",
+            // Backend & Languages
             "C#",
+            "ASP.NET",
+
+            // Databases & Data Access
+            "Oracle Database",
             "SQL Server",
-            "Oracle",
-            "Microsoft Azure",
+            "Entity Framework",
+            "Dapper",
+
+            // Database Tools & Administration
+            "Oracle Enterprise Manager",
+
+            // APIs & Integration
+            "SOAP Web Services",
+
+            // Cloud
+            "Azure",
+
+            // Reporting & Analytics
             "Microsoft Power BI",
+            "SQL Reporting Services (SSRS)",
+
+            // Architecture & Modeling
             "Enterprise Architect",
           ]
         },
@@ -122,11 +266,25 @@ export const cvEs: CvDictionary = {
             "Participé en iniciativas de evaluación técnica y selección de proveedores para nuevas unidades de negocio, contribuyendo posteriormente a las integraciones de sistemas."
           ],
           technologies: [
-            "ASP.NET",
+            // Backend & Languages
             "C#",
+            "ASP.NET",
+            "PL/SQL",
+
+            // Databases
+            "Oracle Database",
             "SQL Server",
-            "Oracle",
+
+            // Oracle Ecosystem & Tools
+            "Oracle Forms & Reports",
+
+            // Infrastructure
+            "Internet Information Services (IIS)",
+
+            // Data & Analytics
             "SAS",
+            "ETL",
+            "Data Warehouse",
           ]
         },
         {
@@ -139,9 +297,12 @@ export const cvEs: CvDictionary = {
             "Elaboré documentación técnica y entregables de despliegue, cumpliendo consistentemente con los objetivos de resolución de incidentes y satisfacción del cliente.",
           ],
           technologies: [
+            // Database & Language
             "Oracle Database",
-            "Oracle Forms & Reports",
             "PL/SQL",
+
+            // Oracle Ecosystem & Tools
+            "Oracle Forms & Reports",
           ]
         }
       ]
@@ -180,14 +341,6 @@ export const cvEs: CvDictionary = {
         }
       ]
     },
-  ],
-  techGroups: [
-    { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
-    { title: "Backend", items: ".NET / Spring Boot" },
-    { title: "Frontend", items: "React / Next.js / React Native" },
-    { title: "Arquitecturas", items: "Microservicios / Basada en eventos / Serverless" },
-    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / Automatización CI/CD" },
-    { title: "Base de datos", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle" },
   ],
   education: [
     {

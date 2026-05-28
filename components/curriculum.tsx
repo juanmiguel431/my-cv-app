@@ -305,14 +305,16 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                   >
                       <div>
                         <h3 className={`text-lg font-bold ${styles.sectionTitle}`}>
-                          <a
-                            href={experience.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={`group inline-flex items-center gap-2 transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
-                          >
-                            {experience.company} <ExternalLinkIcon className="h-4 w-4"/>
-                          </a>
+                          {experience.url ? (
+                            <a
+                              href={experience.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className={`group inline-flex items-center gap-2 transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                            >
+                              {experience.company} <ExternalLinkIcon className="h-4 w-4"/>
+                            </a>
+                          ) : experience.company}
                         </h3>
                         <p className={`mt-3 text-base leading-6 ${styles.mutedText}`}>{experience.description}</p>
 
