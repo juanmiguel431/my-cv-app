@@ -17,7 +17,7 @@ jobs:
 
       - name: Build and Push Docker images
         run: |
-          docker build --build-arg GITHUB_SHA=${{ github.sha }} -t ghcr.io/juanmiguel431/my-cv-app -f ./Dockerfile .
+          docker build --build-arg SITE_URL=${{ vars.SITE_URL }} -t ghcr.io/juanmiguel431/my-cv-app -f ./Dockerfile .
 
           docker push ghcr.io/juanmiguel431/my-cv-app
 
