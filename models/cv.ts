@@ -56,6 +56,7 @@ export type CvMetadata = {
 };
 
 export type CvProfile = {
+  username: string;
   name: string;
   role: string;
   email: string;

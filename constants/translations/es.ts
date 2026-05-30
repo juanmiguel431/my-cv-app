@@ -25,6 +25,7 @@ export const cvEs: CvDictionary = {
     download: "Descargar",
   },
   profile: {
+    username: "juanmiguel431",
     name: "Juan Miguel Paulino Carpio",
     role: "Ingeniero de Software Senior",
     email: "juanmiguel431@gmail.com",
