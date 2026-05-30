@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
     },
     description: dictionary.metadata.description,
     applicationName: "Juan Miguel CV",
-
     manifest: '/favicons/site.webmanifest',
     icons: {
       icon: [
@@ -49,8 +48,6 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
         },
       ],
     },
-
-
     keywords: [
       "Juan Miguel Paulino Carpio",
       "Curriculum Vitae",
