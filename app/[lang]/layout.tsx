@@ -25,6 +25,32 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
     },
     description: dictionary.metadata.description,
     applicationName: "Juan Miguel CV",
+
+    manifest: '/favicons/site.webmanifest',
+    icons: {
+      icon: [
+        {
+          url: '/favicons/favicon.ico',
+        },
+        {
+          url: '/favicons/favicon.svg',
+          type: 'image/svg+xml',
+        },
+        {
+          url: '/favicons/favicon-96x96.png',
+          sizes: '96x96',
+          type: 'image/png',
+        },
+      ],
+      apple: [
+        {
+          url: '/favicons/apple-touch-icon.png',
+          sizes: '180x180',
+        },
+      ],
+    },
+
+
     keywords: [
       "Juan Miguel Paulino Carpio",
       "Curriculum Vitae",
