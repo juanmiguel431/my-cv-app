@@ -39,73 +39,11 @@ export const cvEs: CvDictionary = {
     { title: "Lenguajes de Programación", items: "C# / Java / Python / TypeScript" },
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
-    { title: "Arquitecturas", items: "Microservicios / Monolito Modular / SaaS Multi-tenant / Basada en eventos / Serverless" },
+    { title: "Arquitecturas", items: "Microservicios / Monolito Modular / SaaS Multi-tenant / Basada en eventos" },
     { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / Automatización CI/CD" },
     { title: "Base de datos", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle Database" },
   ],
   experiences: [
-    {
-      company: "Billet",
-      url: "https://billet.do",
-      contract: true,
-      description: "Plataforma fintech para pagos digitales y servicios financieros, habilitando transacciones en tiempo real, onboarding de clientes y cumplimiento regulatorio mediante integraciones con sistemas bancarios (p. ej., Banco BHD).",
-      roles: [
-        {
-          name: "Senior Software Engineer",
-          period: "Sep 2024 - Dic 2025",
-          periodLength: "1 año 4 meses",
-          contributions: [
-            "Mejoré la productividad de los desarrolladores al habilitar entornos locales de alta fidelidad utilizando LocalStack y bases de datos contenerizadas (Redis, PostgreSQL, DynamoDB).",
-            "Incrementé la cobertura de pruebas automatizadas en servicios Serverless desarrollados en Java (Spring Boot) y Python, mejorando la confiabilidad del CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
-            "Lideré la migración de servicios Spring Boot de Java 11 a 17, reduciendo deuda técnica y optimizando el mantenimiento.",
-            "Mejoré la confiabilidad de flujos financieros asíncronos al reducir errores de procesamiento en SNS/SQS e implementar controles de idempotencia basados en Redis.",
-            "Desarrollé servicios de evaluación de clientes y riesgo para flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
-            "Reforcé la seguridad de integraciones bancarias trasladando lógica sensible de procesamiento al Backend."
-          ],
-          technologies: [
-            // Backend & Languages
-            "Java",
-            "Spring Boot",
-            "Python",
-
-            // Frontend
-            "React Native",
-
-            // Cloud & Infrastructure
-            "AWS",
-            "EC2",
-            "Lambda",
-            "API Gateway",
-            "S3",
-            "SNS",
-            "SQS",
-            "CloudWatch",
-            "Parameter Store",
-            "Secrets Manager",
-            "Cognito",
-
-            // Databases & Caching
-            "PostgreSQL",
-            "DynamoDB",
-            "Redis",
-
-            // DevOps & Deployment
-            "Docker",
-            "LocalStack",
-            "Serverless Framework",
-            "CodePipeline",
-            "SonarQube",
-
-            // Collaboration & Methodologies
-            "Git",
-            "Bitbucket",
-            "Jira",
-            "Confluence",
-          ],
-        }
-      ],
-
-    },
     {
       company: "Member Care",
       url: "https://www.membercare.net",
@@ -181,39 +119,65 @@ export const cvEs: CvDictionary = {
       ]
     },
     {
-      company: "Plataforma de Campaña Política",
-      url: "",
-      description: "Plataforma web a la medida desarrollada para un movimiento político presidencial con el objetivo de gestionar la inscripción de miembros, el seguimiento del crecimiento regional y campañas de comunicación segmentadas.",
+      company: "Billet",
+      url: "https://billet.do",
+      contract: true,
+      description: "Plataforma fintech para pagos digitales y servicios financieros, habilitando transacciones en tiempo real, onboarding de clientes y cumplimiento regulatorio mediante integraciones con sistemas bancarios (p. ej., Banco BHD).",
       roles: [
         {
           name: "Senior Software Engineer",
-          period: "Oct 2018 - Mar 2020",
-          periodLength: "1 año 6 meses",
+          period: "Sep 2024 - Dic 2025",
+          periodLength: "1 año 4 meses",
           contributions: [
-            "Diseñé y desarrollé una plataforma Web Responsive optimizada para flujos de trabajo en computadoras, tabletas y dispositivos móviles, orientada a soportar operaciones de inscripción de campañas políticas a gran escala.",
-            "Implementé un sistema jerárquico de referencias de miembros, permitiendo a los administradores medir el rendimiento de reclutamiento y visualizar el crecimiento regional por provincia.",
-            "Construí funcionalidades de segmentación de audiencia y notificaciones para campañas de comunicación dirigidas según grupos y regiones geográficas.",
-            "Integré WordPress como portal de gestión de contenido para publicar noticias y actualizaciones del movimiento.",
-            "Gestioné el despliegue y mantenimiento de infraestructura Linux en servidores de DigitalOcean.",
-            "Integré Mailgun para la entrega de correos transaccionales y campañas de comunicación masiva.",
+            "Mejoré la productividad de los desarrolladores al habilitar entornos locales de alta fidelidad utilizando LocalStack y bases de datos contenerizadas (Redis, PostgreSQL, DynamoDB).",
+            "Incrementé la cobertura de pruebas automatizadas en servicios Serverless desarrollados en Java (Spring Boot) y Python, mejorando la confiabilidad del CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
+            "Lideré la migración de servicios Spring Boot de Java 11 a 17, reduciendo deuda técnica y optimizando el mantenimiento.",
+            "Mejoré la confiabilidad de flujos financieros asíncronos al reducir errores de procesamiento en SNS/SQS e implementar controles de idempotencia basados en Redis.",
+            "Desarrollé servicios de evaluación de clientes y riesgo para flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
+            "Reforcé la seguridad de integraciones bancarias trasladando lógica sensible de procesamiento al Backend."
           ],
           technologies: [
-            "Laravel",
-            "PHP",
-            "MySQL",
-            "Apache",
-            "Ubuntu",
-            "DigitalOcean",
-            "Mailgun",
-            "WordPress",
-            "JavaScript",
-            "jQuery",
-            "Materialize CSS",
-            "Supervisor",
-            "phpMyAdmin",
+            // Backend & Languages
+            "Java",
+            "Spring Boot",
+            "Python",
+
+            // Frontend
+            "React Native",
+
+            // Cloud & Infrastructure
+            "AWS",
+            "EC2",
+            "Lambda",
+            "API Gateway",
+            "S3",
+            "SNS",
+            "SQS",
+            "CloudWatch",
+            "Parameter Store",
+            "Secrets Manager",
+            "Cognito",
+
+            // Databases & Caching
+            "PostgreSQL",
+            "DynamoDB",
+            "Redis",
+
+            // DevOps & Deployment
+            "Docker",
+            "LocalStack",
+            "Serverless Framework",
+            "CodePipeline",
+            "SonarQube",
+
+            // Collaboration & Methodologies
+            "Git",
+            "Bitbucket",
+            "Jira",
+            "Confluence",
           ],
         }
-      ]
+      ],
     },
     {
       company: "Grupo Universal",
@@ -305,6 +269,41 @@ export const cvEs: CvDictionary = {
             // Oracle Ecosystem & Tools
             "Oracle Forms & Reports",
           ]
+        }
+      ]
+    },
+    {
+      company: "Plataforma de Campaña Política",
+      url: "",
+      description: "Plataforma web a la medida desarrollada para un movimiento político presidencial con el objetivo de gestionar la inscripción de miembros, el seguimiento del crecimiento regional y campañas de comunicación segmentadas.",
+      roles: [
+        {
+          name: "Senior Software Engineer",
+          period: "Oct 2018 - Mar 2020",
+          periodLength: "1 año 6 meses",
+          contributions: [
+            "Diseñé y desarrollé una plataforma Web Responsive optimizada para flujos de trabajo en computadoras, tabletas y dispositivos móviles, orientada a soportar operaciones de inscripción de campañas políticas a gran escala.",
+            "Implementé un sistema jerárquico de referencias de miembros, permitiendo a los administradores medir el rendimiento de reclutamiento y visualizar el crecimiento regional por provincia.",
+            "Construí funcionalidades de segmentación de audiencia y notificaciones para campañas de comunicación dirigidas según grupos y regiones geográficas.",
+            "Integré WordPress como portal de gestión de contenido para publicar noticias y actualizaciones del movimiento.",
+            "Gestioné el despliegue y mantenimiento de infraestructura Linux en servidores de DigitalOcean.",
+            "Integré Mailgun para la entrega de correos transaccionales y campañas de comunicación masiva.",
+          ],
+          technologies: [
+            "Laravel",
+            "PHP",
+            "MySQL",
+            "Apache",
+            "Ubuntu",
+            "DigitalOcean",
+            "Mailgun",
+            "WordPress",
+            "JavaScript",
+            "jQuery",
+            "Materialize CSS",
+            "Supervisor",
+            "phpMyAdmin",
+          ],
         }
       ]
     },

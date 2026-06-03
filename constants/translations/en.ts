@@ -39,72 +39,11 @@ export const cvEn: CvDictionary = {
     { title: "Programming Languages", items: "C# / Java / Python / TypeScript" },
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
-    { title: "Architectures", items: "Microservices / Modular Monolith / Multi-Tenant SaaS / Event-Driven / Serverless" },
+    { title: "Architectures", items: "Microservices / Modular Monolith / Multi-Tenant SaaS / Event-Driven" },
     { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / CI/CD Automation" },
     { title: "Databases", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle Database" },
   ],
   experiences: [
-    {
-      company: "Billet",
-      url: "https://billet.do",
-      contract: true,
-      description: "Fintech platform for digital payments and financial services, enabling real-time transactions, customer onboarding, and regulatory compliance through integrations with banking systems (e.g., Banco BHD).",
-      roles: [
-        {
-          name: "Senior Software Engineer",
-          period: "Sep 2024 - Dec 2025",
-          periodLength: "1 year 4 months",
-          contributions: [
-            "Improved developer productivity by enabling high-fidelity local environments using LocalStack and containerized databases (Redis, PostgreSQL, DynamoDB).",
-            "Increased automated test coverage across Java (Spring Boot) and Python serverless services, improving CI/CD reliability with Bitbucket, AWS CodePipeline, and SonarQube.",
-            "Led Java 11 → Java 17 migration efforts for Spring Boot services, reducing technical debt and improving maintainability.",
-            "Improved reliability of asynchronous financial workflows by reducing SNS/SQS processing errors and implementing Redis-based idempotency controls.",
-            "Developed customer screening and risk scoring services supporting compliance workflows (KYC, PEP, watchlists).",
-            "Strengthened security for banking integrations by moving sensitive processing logic to the backend."
-          ],
-          technologies: [
-            // Backend & Languages
-            "Java",
-            "Spring Boot",
-            "Python",
-
-            // Frontend
-            "React Native",
-
-            // Cloud & Infrastructure
-            "AWS",
-            "EC2",
-            "Lambda",
-            "API Gateway",
-            "S3",
-            "SNS",
-            "SQS",
-            "CloudWatch",
-            "Parameter Store",
-            "Secrets Manager",
-            "Cognito",
-
-            // Databases & Caching
-            "PostgreSQL",
-            "DynamoDB",
-            "Redis",
-
-            // DevOps & Deployment
-            "Docker",
-            "LocalStack",
-            "Serverless Framework",
-            "CodePipeline",
-            "SonarQube",
-
-            // Collaboration & Methodologies
-            "Git",
-            "Bitbucket",
-            "Jira",
-            "Confluence",
-          ]
-        }
-      ]
-    },
     {
       company: "Member Care",
       url: "https://www.membercare.net",
@@ -180,37 +119,63 @@ export const cvEn: CvDictionary = {
       ]
     },
     {
-      company: "Political Campaign Platform",
-      url: "",
-      description: "Custom web platform developed for a presidential political movement to manage member enrollment, regional growth tracking, and targeted communication campaigns.",
+      company: "Billet",
+      url: "https://billet.do",
+      contract: true,
+      description: "Fintech platform for digital payments and financial services, enabling real-time transactions, customer onboarding, and regulatory compliance through integrations with banking systems (e.g., Banco BHD).",
       roles: [
         {
           name: "Senior Software Engineer",
-          period: "Oct 2018 - Mar 2020",
-          periodLength: "1 years 6 months",
+          period: "Sep 2024 - Dec 2025",
+          periodLength: "1 year 4 months",
           contributions: [
-            "Designed and developed a responsive web platform optimized for desktop, tablet, and mobile workflows to support large-scale political campaign enrollment operations",
-            "Implemented hierarchical member referral tracking, enabling administrators to measure recruitment performance and visualize regional growth by province.",
-            "Developed audience segmentation and notification features for targeted communication campaigns based on groups and geographic regions.",
-            "Integrated WordPress as a content management portal for publishing campaign news and movement updates.",
-            "Managed deployment and maintenance of Linux-based infrastructure on DigitalOcean servers.",
-            "Integrated Mailgun for transactional and campaign email delivery workflows.",
+            "Improved developer productivity by enabling high-fidelity local environments using LocalStack and containerized databases (Redis, PostgreSQL, DynamoDB).",
+            "Increased automated test coverage across Java (Spring Boot) and Python serverless services, improving CI/CD reliability with Bitbucket, AWS CodePipeline, and SonarQube.",
+            "Led Java 11 → Java 17 migration efforts for Spring Boot services, reducing technical debt and improving maintainability.",
+            "Improved reliability of asynchronous financial workflows by reducing SNS/SQS processing errors and implementing Redis-based idempotency controls.",
+            "Developed customer screening and risk scoring services supporting compliance workflows (KYC, PEP, watchlists).",
+            "Strengthened security for banking integrations by moving sensitive processing logic to the backend."
           ],
           technologies: [
-            "Laravel",
-            "PHP",
-            "MySQL",
-            "Apache",
-            "Ubuntu",
-            "DigitalOcean",
-            "Mailgun",
-            "WordPress",
-            "JavaScript",
-            "jQuery",
-            "Materialize CSS",
-            "Supervisor",
-            "phpMyAdmin",
-          ],
+            // Backend & Languages
+            "Java",
+            "Spring Boot",
+            "Python",
+
+            // Frontend
+            "React Native",
+
+            // Cloud & Infrastructure
+            "AWS",
+            "EC2",
+            "Lambda",
+            "API Gateway",
+            "S3",
+            "SNS",
+            "SQS",
+            "CloudWatch",
+            "Parameter Store",
+            "Secrets Manager",
+            "Cognito",
+
+            // Databases & Caching
+            "PostgreSQL",
+            "DynamoDB",
+            "Redis",
+
+            // DevOps & Deployment
+            "Docker",
+            "LocalStack",
+            "Serverless Framework",
+            "CodePipeline",
+            "SonarQube",
+
+            // Collaboration & Methodologies
+            "Git",
+            "Bitbucket",
+            "Jira",
+            "Confluence",
+          ]
         }
       ]
     },
@@ -304,6 +269,41 @@ export const cvEn: CvDictionary = {
             // Oracle Ecosystem & Tools
             "Oracle Forms & Reports",
           ]
+        }
+      ]
+    },
+    {
+      company: "Political Campaign Platform",
+      url: "",
+      description: "Custom web platform developed for a presidential political movement to manage member enrollment, regional growth tracking, and targeted communication campaigns.",
+      roles: [
+        {
+          name: "Senior Software Engineer",
+          period: "Oct 2018 - Mar 2020",
+          periodLength: "1 years 6 months",
+          contributions: [
+            "Designed and developed a responsive web platform optimized for desktop, tablet, and mobile workflows to support large-scale political campaign enrollment operations",
+            "Implemented hierarchical member referral tracking, enabling administrators to measure recruitment performance and visualize regional growth by province.",
+            "Developed audience segmentation and notification features for targeted communication campaigns based on groups and geographic regions.",
+            "Integrated WordPress as a content management portal for publishing campaign news and movement updates.",
+            "Managed deployment and maintenance of Linux-based infrastructure on DigitalOcean servers.",
+            "Integrated Mailgun for transactional and campaign email delivery workflows.",
+          ],
+          technologies: [
+            "Laravel",
+            "PHP",
+            "MySQL",
+            "Apache",
+            "Ubuntu",
+            "DigitalOcean",
+            "Mailgun",
+            "WordPress",
+            "JavaScript",
+            "jQuery",
+            "Materialize CSS",
+            "Supervisor",
+            "phpMyAdmin",
+          ],
         }
       ]
     },
