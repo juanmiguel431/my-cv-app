@@ -42,6 +42,8 @@ export type CvLabels = {
   professionalSummary: string;
   experience: string;
   education: string;
+  courses: string;
+  certificate: string;
   download: string;
 };
 
@@ -76,4 +78,17 @@ export type CvDictionary = {
   experiences: Experience[];
   techGroups: TechGroup[];
   education: Education[];
+  courses: Course[];
+};
+
+export type Course = {
+  name: string;
+  company: string;
+  companyUrl: string;
+  completedDate: string;
+  duration: string;
+  instructor: string;
+  certificateUrl: string;
+  certificatePdfUrl: string;
+  courseUrl: string;
 };

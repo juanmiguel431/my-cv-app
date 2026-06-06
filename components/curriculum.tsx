@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useSyncExternalStore } from "react";
 
 import {
+  BookIcon,
   CalendarIcon,
   ChipIcon,
   ExperienceIcon,
@@ -79,7 +80,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
     window.dispatchEvent(new Event(THEME_EVENT));
   };
 
-  const { labels, profile, experiences, techGroups, education, pdfFileName } = dictionary;
+  const { labels, profile, experiences, techGroups, education, courses, pdfFileName } = dictionary;
   const phoneHref = `tel:${profile.phone.replace(/[^\d+]/g, "")}`;
   const githubUrl = `https://${profile.github}`;
   const linkedinUrl = `https://${profile.linkedin}`;
@@ -403,14 +404,44 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                   </div>
                 ))}
               </div>
+
+              {courses.length > 0 && (
+                <section className="mt-6">
+                  <div className="mb-3 flex items-center gap-2">
+                    <BookIcon className={`h-4 w-4 ${isDark ? "text-cyan-300" : "text-cyan-700"}`} />
+                    <h3 className={`text-base font-bold ${styles.sectionTitle}`}>
+                      {labels.courses}
+                    </h3>
+                  </div>
+
+                  <div className={`overflow-hidden rounded-2xl border ${styles.subtleCard}`}>
+                    <ul className={`divide-y p-4 ${isDark ? "divide-slate-700/70" : "divide-slate-200"}`}>
+                      {courses.map((course) => (
+                        <li key={`${course.name}-${course.completedDate}`} style={{ paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span>
+                              <a
+                                href={course.certificateUrl || course.certificatePdfUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={`text-sm font-semibold sm:text-base transition-all duration-200 hover:underline underline-offset-4 ${styles.linkStyle}`}
+                              >
+                                <span className="min-w-0">{course.name}</span>
+                              </a>
+                            </span>
+
+                            <span className={`text-sm ${styles.mutedText}`}>
+                              {" · "}
+                              <span className={styles.periodLengthText}>{course.completedDate}</span>
+                            </span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
+              )}
             </article>
-
-
-            <div className="grid gap-6 xl:grid-cols-2">
-              <div className="space-y-6">
-              </div>
-            </div>
-
           </div>
         </section>
       </div>
