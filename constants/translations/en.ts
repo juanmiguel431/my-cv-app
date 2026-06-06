@@ -382,7 +382,7 @@ export const cvEn: CvDictionary = {
       duration: "22 hrs",
     },
     {
-      name: "Spring Boot Unit Testing with JUnit, Mockito and MockMvc",
+      name: "Spring Boot Unit Testing with JUnit",
       courseUrl: "https://www.udemy.com/course/spring-boot-unit-testing",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",

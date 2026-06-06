@@ -415,9 +415,9 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                   </div>
 
                   <div className={`overflow-hidden rounded-2xl border ${styles.subtleCard}`}>
-                    <ul className={`divide-y p-4 ${isDark ? "divide-slate-700/70" : "divide-slate-200"}`}>
+                    <div className={` p-4 grid gap-3 md:grid-flow-col md:grid-rows-13 ${isDark ? "divide-slate-700/70" : "divide-slate-200"}`}>
                       {courses.map((course) => (
-                        <li key={`${course.name}-${course.completedDate}`} style={{ paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                        <div key={`${course.name}-${course.completedDate}`} style={{ paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                           <div className="flex flex-wrap items-center gap-2">
                             <span>
                               <a
@@ -435,9 +435,9 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
                               <span className={styles.periodLengthText}>{course.completedDate}</span>
                             </span>
                           </div>
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </section>
               )}
