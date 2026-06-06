@@ -382,7 +382,7 @@ export const cvEn: CvDictionary = {
       duration: "22 hrs",
     },
     {
-      name: "Spring Boot Unit Testing with JUnit",
+      name: "Spring Boot Unit Testing",
       courseUrl: "https://www.udemy.com/course/spring-boot-unit-testing",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -404,7 +404,7 @@ export const cvEn: CvDictionary = {
       duration: "33.5 hrs",
     },
     {
-      name: "Responsive Websites with HTML and CSS",
+      name: "Responsive Web Design",
       courseUrl: "https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -415,7 +415,7 @@ export const cvEn: CvDictionary = {
       duration: "37.5 hrs",
     },
     {
-      name: "Object Oriented Programming in JavaScript",
+      name: "Object Oriented Programming (JavaScript)",
       courseUrl: "https://www.udemy.com/course/javascript-object-oriented-programming",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -437,7 +437,7 @@ export const cvEn: CvDictionary = {
       duration: "13.5 hrs",
     },
     {
-      name: "React Native - Advance Concepts",
+      name: "React Native - Advance",
       courseUrl: "https://www.udemy.com/course/react-native-advanced",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -492,7 +492,7 @@ export const cvEn: CvDictionary = {
       duration: "7.5 hrs",
     },
     {
-      name: "React & Typescript- Build a Portfolio Project",
+      name: "React & Typescript - Portfolio",
       courseUrl: "https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -503,7 +503,7 @@ export const cvEn: CvDictionary = {
       duration: "29.5 hrs",
     },
     {
-      name: ".NET Core & Microservices",
+      name: "Microservices with .NET Core",
       courseUrl: "https://www.udemy.com/course/net-core-microservices-the-complete-guide-net-6-mvc",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -536,7 +536,7 @@ export const cvEn: CvDictionary = {
       duration: "3 hrs",
     },
     {
-      name: "C# Intermediate: Classes, Interfaces and OOP",
+      name: "C# Intermediate: OOP",
       courseUrl: "https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -569,7 +569,7 @@ export const cvEn: CvDictionary = {
       duration: "6 hrs",
     },
     {
-      name: "Entity Framework in Depth",
+      name: "Entity Framework",
       courseUrl: "https://www.udemy.com/course/entity-framework-tutorial",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -591,7 +591,7 @@ export const cvEn: CvDictionary = {
       duration: "7.5 hrs",
     },
     {
-      name: "Microsoft Azure Administrator (AZ-103)",
+      name: "Microsoft Azure Administrator",
       courseUrl: "",
       company: "Interactive Technology Group",
       companyUrl: "https://itg.online",

@@ -382,7 +382,7 @@ export const cvEs: CvDictionary = {
       duration: "22 hrs",
     },
     {
-      name: "Spring Boot Unit Testing con JUnit",
+      name: "Spring Boot Unit Testing",
       courseUrl: "https://www.udemy.com/course/spring-boot-unit-testing",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -404,7 +404,7 @@ export const cvEs: CvDictionary = {
       duration: "33.5 hrs",
     },
     {
-      name: "Sitios Web Responsivos con HTML y CSS",
+      name: "Diseño Web Responsivo",
       courseUrl: "https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -415,7 +415,7 @@ export const cvEs: CvDictionary = {
       duration: "37.5 hrs",
     },
     {
-      name: "Programación Orientada a Objetos en JavaScript",
+      name: "Programación Orientada a Objetos (JavaScript)",
       courseUrl: "https://www.udemy.com/course/javascript-object-oriented-programming",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -437,7 +437,7 @@ export const cvEs: CvDictionary = {
       duration: "13.5 hrs",
     },
     {
-      name: "React Native - Conceptos Avanzados",
+      name: "React Native - Avanzado",
       courseUrl: "https://www.udemy.com/course/react-native-advanced",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -492,7 +492,7 @@ export const cvEs: CvDictionary = {
       duration: "7.5 hrs",
     },
     {
-      name: "React & Typescript - Portafolio de Proyectos",
+      name: "React & Typescript - Portafolio",
       courseUrl: "https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -536,7 +536,7 @@ export const cvEs: CvDictionary = {
       duration: "3 hrs",
     },
     {
-      name: "C# Intermedio: Clases, Interfaces y POO",
+      name: "C# Intermedio: POO",
       courseUrl: "https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop",
       company: "Udemy",
       companyUrl: "https://www.udemy.com",
@@ -591,7 +591,7 @@ export const cvEs: CvDictionary = {
       duration: "7.5 hrs",
     },
     {
-      name: "Administrador de Microsoft Azure (AZ-103)",
+      name: "Administrador de Microsoft Azure",
       courseUrl: "",
       company: "Interactive Technology Group",
       companyUrl: "https://itg.online",
