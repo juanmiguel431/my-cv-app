@@ -14,8 +14,8 @@ export const cvEs: CvDictionary = {
   pdfFileName: "Curriculum - Juan Miguel Paulino - ES.pdf",
   labels: {
     curriculumVitae: "Currículum",
-    themeLight: "Modo claro",
-    themeDark: "Modo oscuro",
+    themeLight: "Claro",
+    themeDark: "Oscuro",
     language: "Idioma",
     coreStack: "Stack Principal",
     professionalSummary: "Resumen Profesional",
@@ -25,6 +25,7 @@ export const cvEs: CvDictionary = {
     courses: "Cursos y Certificaciones",
     certificate: "Certificado",
     download: "Descargar",
+    resumePdf: "Currículum (PDF)",
   },
   profile: {
     username: "juanmiguel431",

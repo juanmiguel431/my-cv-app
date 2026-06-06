@@ -45,6 +45,7 @@ export type CvLabels = {
   courses: string;
   certificate: string;
   download: string;
+  resumePdf: string;
 };
 
 export type CvMetadata = {
