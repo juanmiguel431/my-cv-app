@@ -112,7 +112,7 @@ export default function Curriculum({ dictionary, currentLocale }: CurriculumProp
             <button
               type="button"
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className={`inline-flex w-30 justify-center items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition border ${
+              className={`inline-flex w-25 justify-center items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition border ${
                 isDark
                   ? "border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700"
                   : "border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
