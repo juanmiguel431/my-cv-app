@@ -36,14 +36,14 @@ export const cvEn: CvDictionary = {
     github: "github.com/juanmiguel431",
     linkedin: "linkedin.com/in/juanmiguel431",
     profileImageAlt: "Juan Miguel Paulino Carpio profile picture",
-    summary: "Senior Software Engineer with 15+ years of experience building enterprise and cloud-native applications using .NET, Java, Python, TypeScript, React, AWS, and Azure. Strong background in distributed systems and scalable backend architectures, focused on building reliable, secure, and high-performance applications with a strong emphasis on user experience. Experience delivering solutions across fintech, insurance, and healthcare industries.",
+    summary: "Senior Software Engineer with 15+ years of experience building enterprise and cloud-native applications using .NET, Java, Python, TypeScript, React, AWS, and Azure. Strong background in distributed systems and scalable backend architectures, focused on building reliable, secure, and high-performance applications with a strong emphasis on user experience. Experience delivering solutions across fintech, financial services, insurance, and healthcare industries.",
   },
   techGroups: [
     { title: "Programming Languages", items: "C# / Java / Python / TypeScript" },
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
     { title: "Architectures", items: "Microservices / Modular Monolith / Multi-Tenant SaaS / Event-Driven" },
-    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / CI/CD Automation" },
+    { title: "Cloud & DevOps", items: "AWS / Azure / Serverless / Docker / Kubernetes / CI/CD Automation" },
     { title: "Databases", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle Database" },
   ],
   experiences: [
