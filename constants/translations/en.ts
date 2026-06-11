@@ -43,7 +43,7 @@ export const cvEn: CvDictionary = {
     { title: "Backend", items: ".NET / Spring Boot" },
     { title: "Frontend", items: "React / Next.js / React Native" },
     { title: "Architectures", items: "Microservices / Modular Monolith / Multi-Tenant SaaS / Event-Driven" },
-    { title: "Cloud & DevOps", items: "AWS / Azure / Serverless / Docker / Kubernetes / CI/CD Automation" },
+    { title: "Cloud & DevOps", items: "AWS / Azure / Docker / Kubernetes / CI/CD Automation / Serverless" },
     { title: "Databases", items: "SQL Server / PostgreSQL / DynamoDB / Cosmos DB / Oracle Database" },
   ],
   experiences: [
