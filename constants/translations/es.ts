@@ -133,7 +133,7 @@ export const cvEs: CvDictionary = {
           periodLength: "1 año 4 meses",
           contributions: [
             "Mejoré la productividad de los desarrolladores al habilitar entornos locales de alta fidelidad utilizando LocalStack y bases de datos contenerizadas (Redis, PostgreSQL, DynamoDB).",
-            "Incrementé la cobertura de pruebas automatizadas en servicios Serverless desarrollados en Java (Spring Boot) y Python, mejorando la confiabilidad del CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
+            "Incrementé la cobertura de pruebas automatizadas de servicios Java (Spring Boot) y Python serverless, mejorando la confiabilidad del flujo CI/CD con Bitbucket, AWS CodePipeline y SonarQube.",
             "Lideré la migración de servicios Spring Boot de Java 11 a 17, reduciendo deuda técnica y optimizando el mantenimiento.",
             "Mejoré la confiabilidad de flujos financieros asíncronos al reducir errores de procesamiento en SNS/SQS e implementar controles de idempotencia basados en Redis.",
             "Desarrollé servicios de evaluación de clientes y riesgo para flujos de cumplimiento (KYC, PEP, listas de vigilancia).",
@@ -285,7 +285,7 @@ export const cvEs: CvDictionary = {
           period: "Oct 2018 - Mar 2020",
           periodLength: "1 año 6 meses",
           contributions: [
-            "Diseñé y desarrollé una plataforma Web Responsive optimizada para flujos de trabajo en computadoras, tabletas y dispositivos móviles, orientada a soportar operaciones de inscripción de campañas políticas a gran escala.",
+            "Diseñé y desarrollé una plataforma Web Responsiva, optimizada para flujos de trabajo en computadoras, tabletas y dispositivos móviles, orientada a soportar operaciones de inscripción de campañas políticas a gran escala.",
             "Implementé un sistema jerárquico de referencias de miembros, permitiendo a los administradores medir el rendimiento de reclutamiento y visualizar el crecimiento regional por provincia.",
             "Construí funcionalidades de segmentación de audiencia y notificaciones para campañas de comunicación dirigidas según grupos y regiones geográficas.",
             "Integré WordPress como portal de gestión de contenido para publicar noticias y actualizaciones del movimiento.",
